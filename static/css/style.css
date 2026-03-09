@@ -1,0 +1,214 @@
+/* Guardian Landing Pages — Clean conversion-focused design */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #1a1a2e;
+    line-height: 1.6;
+    background: #f8f9fa;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: #1a1a2e;
+    color: #fff;
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 1.1rem;
+}
+.phone-cta {
+    color: #fff;
+    background: #e63946;
+    padding: 8px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+.phone-cta:hover { background: #c1121f; }
+
+/* Hero */
+.hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    padding: 60px 0 50px;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.4rem;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+.subhead {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+.hero-badges {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+.badge {
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Form section */
+.form-section {
+    padding: 50px 0;
+    background: #fff;
+}
+.form-card {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+.form-card h2 {
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 1.6rem;
+}
+.form-card > p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 24px;
+}
+.form-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+.form-row.full { flex-direction: column; }
+.form-row input,
+.form-row select {
+    flex: 1;
+    padding: 12px 14px;
+    border: 1px solid #d0d0d0;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border 0.2s;
+}
+.form-row input:focus,
+.form-row select:focus {
+    outline: none;
+    border-color: #1a1a2e;
+}
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background: #e63946;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s;
+}
+.btn-submit:hover { background: #c1121f; }
+
+#form-success {
+    text-align: center;
+    padding: 30px 0;
+}
+#form-success h3 {
+    color: #2d6a4f;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+/* Trust signals */
+.trust {
+    padding: 50px 0;
+    background: #f8f9fa;
+}
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+}
+.trust-item {
+    background: #fff;
+    padding: 24px;
+    border-radius: 8px;
+    border: 1px solid #e8e8e8;
+}
+.trust-item h3 {
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+    color: #1a1a2e;
+}
+.trust-item p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* CTA bar */
+.cta-bar {
+    background: #e63946;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+.cta-bar p {
+    font-size: 1.2rem;
+    margin-bottom: 14px;
+}
+.btn-cta {
+    display: inline-block;
+    background: #fff;
+    color: #e63946;
+    padding: 12px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    transition: transform 0.2s;
+}
+.btn-cta:hover { transform: scale(1.05); }
+
+/* Footer */
+footer {
+    background: #1a1a2e;
+    color: rgba(255,255,255,0.6);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .hero h1 { font-size: 1.7rem; }
+    .form-row { flex-direction: column; }
+    .form-card { padding: 24px 18px; }
+    .header-inner { flex-direction: column; gap: 8px; }
+}
