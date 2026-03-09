@@ -47,10 +47,8 @@
         .header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(15,36,71,.97);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:0 24px;transition:box-shadow .3s}
         .header.scrolled{box-shadow:0 1px 20px rgba(0,0,0,.15)}
         .header-inner{max-width:1200px;margin:0 auto;height:72px;display:flex;align-items:center;justify-content:space-between}
-        .logo{display:flex;align-items:center;gap:14px;text-decoration:none}
-        .logo-mark{width:38px;height:38px;border:2px solid rgba(255,255,255,.25);border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:18px;color:#fff;letter-spacing:-1px}
-        .logo-text{color:#fff;font-family:'DM Sans',sans-serif;font-weight:700;font-size:.95rem;letter-spacing:.3px}
-        .logo-text span{display:block;font-weight:400;font-size:.72rem;color:rgba(255,255,255,.5);letter-spacing:1.5px;text-transform:uppercase;margin-top:1px}
+        .logo{display:flex;align-items:center;text-decoration:none}
+        .logo-img{height:44px;width:auto}
         .header-right{display:flex;align-items:center;gap:28px}
         .header-phone{color:rgba(255,255,255,.85);text-decoration:none;font-weight:500;font-size:.95rem;display:flex;align-items:center;gap:8px;transition:color .2s}
         .header-phone:hover{color:#fff}
@@ -60,7 +58,7 @@
 
         /* ── HERO ── */
         .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:120px 24px 80px;overflow:hidden}
-        .hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&q=85&auto=format') center/cover no-repeat}
+        .hero-bg{position:absolute;inset:0;background:url('https://guardwhatmatters.com/wp-content/uploads/2023/08/gaurdian-impact-windows-4.jpg') center/cover no-repeat}
         .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,26,51,.55) 0%,rgba(9,26,51,.7) 50%,rgba(9,26,51,.85) 100%)}
         .hero-content{position:relative;z-index:1;max-width:1200px;width:100%;display:grid;grid-template-columns:1fr 440px;gap:64px;align-items:center}
         .hero-text{color:#fff}
@@ -146,8 +144,8 @@
         .review-name{font-weight:600;font-size:.88rem;color:var(--navy)}
         .review-loc{font-size:.78rem;color:var(--text-light)}
         .reviews-footer{text-align:center;margin-top:40px}
-        .reviews-badge{display:inline-flex;align-items:center;gap:8px;font-size:.9rem;color:var(--text-light);font-weight:500}
-        .reviews-badge strong{color:var(--navy);font-size:1.1rem}
+        .reviews-badges{display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap}
+        .reviews-badges img{height:48px;width:auto}
 
         /* ── MANUFACTURERS ── */
         .manufacturers{background:#fff}
@@ -245,11 +243,7 @@
 <div class="header" id="site-header">
     <div class="header-inner">
         <a href="/" class="logo">
-            <div class="logo-mark">G</div>
-            <div class="logo-text">
-                Guardian
-                <span>Impact Windows & Roofing</span>
-            </div>
+            <img src="https://guardwhatmatters.com/wp-content/uploads/2023/08/Guardian-Vector-File-1.png" alt="Guardian Impact Windows & Roofing" class="logo-img">
         </a>
         <div class="header-right">
             <a href="{{ phone_href }}" class="header-phone" onclick="trackPhoneClick()">
@@ -365,7 +359,7 @@
     </div>
     <div class="products-grid">
         <div class="product-card">
-            <div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=85&auto=format')"></div>
+            <div class="product-img" style="background-image:url('https://guardwhatmatters.com/wp-content/uploads/2023/08/gaurdian-impact-windows-4.jpg')"></div>
             <div class="product-body">
                 <div class="product-tag">Impact Windows</div>
                 <h3>Hurricane-Rated Windows</h3>
@@ -374,7 +368,7 @@
             </div>
         </div>
         <div class="product-card">
-            <div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=85&auto=format')"></div>
+            <div class="product-img" style="background-image:url('https://guardwhatmatters.com/wp-content/uploads/2023/08/gaurdian-impact-windows-2-e1696351682572-1024x997.jpg')"></div>
             <div class="product-body">
                 <div class="product-tag">Impact Doors</div>
                 <h3>Impact-Rated Entry & Sliding Doors</h3>
@@ -483,8 +477,11 @@
         </div>
     </div>
     <div class="reviews-footer">
-        <div class="reviews-badge">
-            <strong>4.8</strong> average across <strong>520+</strong> Google reviews
+        <div class="reviews-badges">
+            <img src="https://guardwhatmatters.com/wp-content/uploads/2023/08/Google-Reviews-5.0.png" alt="Google 5-Star Reviews" style="height:48px">
+            <img src="https://guardwhatmatters.com/wp-content/uploads/2023/08/Facebook-Reviews.png" alt="Facebook Reviews" style="height:48px">
+            <img src="https://guardwhatmatters.com/wp-content/uploads/2023/08/Home-Advisor-Reviews-.png" alt="HomeAdvisor Reviews" style="height:48px">
+            <img src="https://guardwhatmatters.com/wp-content/uploads/2023/08/Yelp-Reviews.png" alt="Yelp Reviews" style="height:48px">
         </div>
     </div>
 </section>
@@ -524,19 +521,19 @@
     </div>
     <div class="gallery-grid">
         <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&q=85&auto=format" alt="Modern South Florida home with impact windows" loading="lazy">
+            <img src="https://guardwhatmatters.com/wp-content/uploads/2023/08/gaurdian-impact-windows-4.jpg" alt="Guardian impact window installation" loading="lazy">
         </div>
         <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=85&auto=format" alt="Luxury Florida residence with impact doors" loading="lazy">
+            <img src="https://guardwhatmatters.com/wp-content/uploads/2023/08/gaurdian-impact-windows-2-e1696351682572-1024x997.jpg" alt="Guardian impact windows on South Florida home" loading="lazy">
         </div>
         <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=85&auto=format" alt="South Florida home exterior with new windows" loading="lazy">
+            <img src="https://guardwhatmatters.com/wp-content/uploads/2023/08/happy-customers.jpg" alt="Happy Guardian customers" loading="lazy">
         </div>
         <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?w=600&q=85&auto=format" alt="Florida home with hurricane-rated windows" loading="lazy">
+            <img src="https://guardwhatmatters.com/wp-content/uploads/2023/08/happy-seniors-1.jpg" alt="Satisfied Guardian homeowners" loading="lazy">
         </div>
         <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c?w=600&q=85&auto=format" alt="Broward County home with impact windows" loading="lazy">
+            <img src="https://guardwhatmatters.com/wp-content/uploads/2023/08/happy-family-with-home-inspection-8.jpg" alt="Guardian home consultation" loading="lazy">
         </div>
     </div>
 </section>
@@ -558,7 +555,7 @@
     <div class="footer-inner">
         <div class="footer-top">
             <div class="footer-brand">
-                <div class="fb-name">Guardian Impact Windows & Roofing</div>
+                <img src="https://guardwhatmatters.com/wp-content/uploads/2023/08/Guardian-Vector-File-1.png" alt="Guardian Impact Windows & Roofing" style="height:40px;width:auto;margin-bottom:6px">
                 <div class="fb-tag">We guard what matters most.</div>
             </div>
             <div class="footer-contact">
