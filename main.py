@@ -7,8 +7,8 @@ Custom domain: quote.guardwhatmatters.com
 """
 import os
 
-from fastapi import FastAPI, Request
-from fastapi.responses import HTMLResponse
+from fastapi import FastAPI, Request, Response
+from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
@@ -44,19 +44,32 @@ async def home(request: Request):
 
 @app.get("/impact-windows-broward", response_class=HTMLResponse)
 async def impact_windows_broward(request: Request):
-    """Impact Windows Broward County landing page."""
-    return templates.TemplateResponse("landing.html", {
+    """Impact Windows Broward County — premium landing page."""
+    return templates.TemplateResponse("impact-windows-broward.html", {
         "request": request,
-        "page_title": "Impact Windows Broward County | Guardian Impact Windows",
-        "h1": "Impact Windows for Broward County Homes",
-        "subhead": "Hurricane-Rated Protection — Free In-Home Estimate, $0 Down Financing",
-        "product": "Impact Windows",
-        "geo": "Broward County",
-        "ga4_id": GA4_MEASUREMENT_ID,
-        "callrail_script": CALLRAIL_SWAP_SCRIPT,
-        "phone": PHONE_NUMBER,
+        "ga4_measurement_id": GA4_MEASUREMENT_ID,
+        "callrail_swap_script": CALLRAIL_SWAP_SCRIPT,
+        "phone_number": PHONE_NUMBER,
         "phone_href": PHONE_HREF,
     })
+
+
+@app.post("/submit-lead")
+async def submit_lead(request: Request, response: Response):
+    """Accept lead form submissions and forward to GuardianQA."""
+    import json, httpx
+    body = await request.json()
+    # Forward to GuardianQA
+    try:
+        async with httpx.AsyncClient() as client:
+            await client.post(
+                "https://web-production-adfe7.up.railway.app/api/landing-page/lead",
+                json=body,
+                timeout=5.0,
+            )
+    except Exception:
+        pass
+    return {"status": "ok"}
 
 
 @app.get("/impact-windows-palm-beach", response_class=HTMLResponse)
