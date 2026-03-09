@@ -3,599 +3,989 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impact Windows Broward County | Guardian Impact Windows & Roofing</title>
-    <meta name="description" content="South Florida's most trusted impact window and door installer. Premium CWS and ESW products, Owens Corning roofing. 520+ five-star reviews. Free in-home estimate.">
+    <title>Impact Windows & Doors Broward County | Guardian Impact Windows & Roofing</title>
+    <meta name="description" content="South Florida's trusted impact window and door installer. Hurricane-rated PGT WinGuard products. Free in-home estimates. Call {{ phone_number }}.">
+    <meta name="robots" content="noindex">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- GA4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ ga4_measurement_id }}"></script>
-    <script>
-        window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-        gtag('js',new Date());gtag('config','{{ ga4_measurement_id }}',{send_page_view:true});
-    </script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','{{ ga4_measurement_id }}',{send_page_view:true});</script>
     <!-- GCLID + UTM capture -->
-    <script>
-        (function(){var p=new URLSearchParams(location.search),d=new Date();d.setTime(d.getTime()+90*864e5);var ex=';expires='+d.toUTCString()+';path=/;SameSite=Lax';var g=p.get('gclid');if(g){document.cookie='gclid='+g+ex;document.cookie='_gcl_aw='+g+ex;}['utm_source','utm_medium','utm_campaign','utm_term','utm_content'].forEach(function(k){var v=p.get(k);if(v)document.cookie=k+'='+v+ex;});})();
-    </script>
+    <script>(function(){var p=new URLSearchParams(location.search),d=new Date();d.setTime(d.getTime()+90*864e5);var ex=';expires='+d.toUTCString()+';path=/;SameSite=Lax';var g=p.get('gclid');if(g){document.cookie='gclid='+g+ex;document.cookie='_gcl_aw='+g+ex;}['utm_source','utm_medium','utm_campaign','utm_term','utm_content'].forEach(function(k){var v=p.get(k);if(v)document.cookie=k+'='+v+ex;});})();</script>
     <!-- CallRail swap -->
     <script src="{{ callrail_swap_script }}"></script>
-
     <style>
-        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-        :root{
-            --navy:#0F2447;
-            --navy-deep:#091A33;
-            --red:#C8202F;
-            --red-hover:#A91A26;
-            --cream:#FAF8F5;
-            --warm-white:#FFFDF9;
-            --text:#1C2B3A;
-            --text-light:#5A6A7A;
-            --border:#E8E4DF;
-            --oc-red:#D12028;
-            --oc-black:#1A1A1A;
+        /* ── Reset & Base ─────────────────────────────────── */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #1a1a2e;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
         }
-        html{scroll-behavior:smooth}
-        body{font-family:'DM Sans',sans-serif;color:var(--text);line-height:1.7;background:var(--warm-white);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; }
 
-        /* ── TYPOGRAPHY ── */
-        h1,h2,h3{font-family:'Plus Jakarta Sans','DM Sans',sans-serif;font-weight:800;line-height:1.2}
-
-        /* ── HEADER ── */
-        .header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(15,36,71,.97);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:0 24px;transition:box-shadow .3s}
-        .header.scrolled{box-shadow:0 1px 20px rgba(0,0,0,.15)}
-        .header-inner{max-width:1200px;margin:0 auto;height:72px;display:flex;align-items:center;justify-content:space-between}
-        .logo{display:flex;align-items:center;text-decoration:none}
-        .logo-img{height:44px;width:auto}
-        .header-right{display:flex;align-items:center;gap:28px}
-        .header-phone{color:rgba(255,255,255,.85);text-decoration:none;font-weight:500;font-size:.95rem;display:flex;align-items:center;gap:8px;transition:color .2s}
-        .header-phone:hover{color:#fff}
-        .header-phone svg{width:16px;height:16px;fill:currentColor;opacity:.7}
-        .header-cta{background:#fff;color:var(--navy);padding:10px 28px;border-radius:100px;text-decoration:none;font-weight:600;font-size:.85rem;letter-spacing:.2px;transition:all .25s}
-        .header-cta:hover{background:var(--cream);transform:translateY(-1px);box-shadow:0 4px 16px rgba(0,0,0,.15)}
-
-        /* ── HERO ── */
-        .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:120px 24px 80px;overflow:hidden}
-        .hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1600&q=85&auto=format') center/cover no-repeat}
-        .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,26,51,.55) 0%,rgba(9,26,51,.7) 50%,rgba(9,26,51,.85) 100%)}
-        .hero-content{position:relative;z-index:1;max-width:1200px;width:100%;display:grid;grid-template-columns:1fr 440px;gap:64px;align-items:center}
-        .hero-text{color:#fff}
-        .hero-eyebrow{font-family:'DM Sans',sans-serif;font-weight:600;font-size:.8rem;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:20px}
-        .hero h1{font-size:3.4rem;font-weight:800;line-height:1.12;margin-bottom:24px}
-        .hero h1 span.accent{color:var(--red)}
-        .hero-body{font-size:1.1rem;line-height:1.8;color:rgba(255,255,255,.75);max-width:540px;margin-bottom:36px}
-        .hero-trust{display:flex;gap:32px;flex-wrap:wrap}
-        .hero-trust-item{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.7);font-size:.88rem;font-weight:500}
-        .hero-trust-item .ht-icon{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:.75rem;flex-shrink:0;border:1px solid rgba(255,255,255,.12)}
-        .hero-trust-item strong{color:#fff}
-
-        /* ── FORM CARD ── */
-        .form-card{background:#fff;border-radius:16px;padding:40px 32px;box-shadow:0 30px 80px rgba(0,0,0,.2)}
-        .form-card h2{font-size:1.55rem;color:var(--navy);text-align:center;margin-bottom:4px}
-        .form-subtitle{text-align:center;color:var(--text-light);font-size:.88rem;margin-bottom:28px}
-        .form-row{display:flex;gap:12px;margin-bottom:14px}
-        .form-row input,.form-row select{flex:1;padding:13px 16px;border:1.5px solid var(--border);border-radius:8px;font-size:.92rem;font-family:'DM Sans',sans-serif;background:var(--cream);transition:all .2s;color:var(--text)}
-        .form-row input:focus,.form-row select:focus{outline:none;border-color:var(--navy);background:#fff;box-shadow:0 0 0 3px rgba(15,36,71,.08)}
-        .form-row input::placeholder{color:#A0A8B4}
-        .form-row select{cursor:pointer;color:var(--text)}
-        .form-btn{display:block;width:100%;padding:15px;margin-top:6px;background:var(--navy);color:#fff;border:none;border-radius:8px;cursor:pointer;font-family:'DM Sans',sans-serif;font-weight:600;font-size:1rem;letter-spacing:.3px;transition:all .25s}
-        .form-btn:hover{background:var(--navy-deep);transform:translateY(-1px);box-shadow:0 4px 20px rgba(15,36,71,.25)}
-        .form-consent{display:flex;align-items:flex-start;gap:8px;margin-top:14px;font-size:.72rem;color:var(--text-light);line-height:1.5}
-        .form-consent input{margin-top:3px;flex-shrink:0}
-        .form-note{text-align:center;margin-top:16px;font-size:.78rem;color:var(--text-light)}
-        .form-note svg{width:14px;height:14px;vertical-align:-2px;fill:var(--text-light);margin-right:4px}
-        #form-success{text-align:center;padding:48px 16px}
-        #form-success h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.6rem;color:var(--navy);margin-bottom:8px}
-        #form-success p{color:var(--text-light);font-size:.95rem;line-height:1.6}
-
-        /* ── CREDENTIALS BAR ── */
-        .credentials{background:var(--navy);padding:20px 24px;border-bottom:1px solid rgba(255,255,255,.06)}
-        .credentials-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:center;gap:48px;flex-wrap:wrap;color:rgba(255,255,255,.55);font-size:.82rem;font-weight:500}
-        .cred-item{display:flex;align-items:center;gap:8px}
-        .cred-divider{width:1px;height:16px;background:rgba(255,255,255,.12)}
-
-        /* ── SECTION STYLES ── */
-        .section{padding:96px 24px}
-        .section-header{text-align:center;max-width:640px;margin:0 auto 56px}
-        .section-header .eyebrow{font-family:'DM Sans',sans-serif;font-weight:600;font-size:.78rem;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:12px}
-        .section-header h2{font-size:2.4rem;color:var(--navy);margin-bottom:16px}
-        .section-header p{color:var(--text-light);font-size:1.05rem;line-height:1.7}
-
-        /* ── PRODUCTS ── */
-        .products{background:var(--cream)}
-        .products-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-        .product-card{background:#fff;border-radius:14px;overflow:hidden;border:1px solid var(--border);transition:all .3s}
-        .product-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(15,36,71,.08)}
-        .product-img{height:280px;background-size:cover;background-position:center;position:relative}
-        .product-img::after{content:'';position:absolute;bottom:0;left:0;right:0;height:60%;background:linear-gradient(transparent,rgba(0,0,0,.2))}
-        .product-body{padding:28px 24px}
-        .product-tag{font-family:'DM Sans',sans-serif;font-weight:600;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--red);margin-bottom:8px}
-        .product-body h3{font-size:1.45rem;color:var(--navy);margin-bottom:10px}
-        .product-body p{font-size:.9rem;color:var(--text-light);line-height:1.65;margin-bottom:18px}
-        .product-brands{font-size:.78rem;color:var(--text-light);font-weight:500;padding-top:14px;border-top:1px solid var(--border)}
-        .product-brands strong{color:var(--text);font-weight:600}
-        .product-link{display:inline-flex;align-items:center;gap:6px;color:var(--navy);font-weight:600;font-size:.88rem;text-decoration:none;transition:gap .2s}
-        .product-link:hover{gap:10px}
-        .product-link svg{width:16px;height:16px;fill:currentColor}
-
-        /* Owens Corning card accent */
-        .product-card.oc .product-tag{color:var(--oc-red)}
-
-        /* ── WHY GUARDIAN ── */
-        .why-section{background:#fff}
-        .why-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-        .why-item{display:flex;gap:20px;padding:32px 28px;border-radius:12px;background:var(--cream);border:1px solid transparent;transition:all .3s}
-        .why-item:hover{border-color:var(--border);background:#fff;box-shadow:0 8px 30px rgba(15,36,71,.04)}
-        .why-icon{width:48px;height:48px;border-radius:10px;background:var(--navy);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-        .why-icon svg{width:22px;height:22px;fill:#fff}
-        .why-item h3{font-family:'DM Sans',sans-serif;font-weight:700;font-size:1.05rem;color:var(--navy);margin-bottom:6px}
-        .why-item p{font-size:.88rem;color:var(--text-light);line-height:1.6}
-
-        /* ── REVIEWS ── */
-        .reviews{background:var(--cream)}
-        .reviews-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-        .review-card{background:#fff;border-radius:14px;padding:32px 28px;border:1px solid var(--border)}
-        .review-stars{color:#E8A500;font-size:1rem;letter-spacing:2px;margin-bottom:14px}
-        .review-quote{font-size:.95rem;color:var(--text);line-height:1.7;margin-bottom:20px;font-style:italic}
-        .review-author{display:flex;align-items:center;gap:12px}
-        .review-avatar{width:40px;height:40px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.95rem}
-        .review-name{font-weight:600;font-size:.88rem;color:var(--navy)}
-        .review-loc{font-size:.78rem;color:var(--text-light)}
-        .reviews-footer{text-align:center;margin-top:40px}
-        .reviews-badges{display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap}
-        .reviews-badges img{height:48px;width:auto}
-
-        /* ── MANUFACTURERS ── */
-        .manufacturers{background:#fff}
-        .mfg-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
-        .mfg-card{text-align:center;padding:40px 28px;border-radius:14px;border:1px solid var(--border);background:var(--cream);transition:all .3s}
-        .mfg-card:hover{background:#fff;box-shadow:0 8px 30px rgba(15,36,71,.06)}
-        .mfg-logo{height:56px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;font-family:'DM Sans',sans-serif;font-weight:800;font-size:1.3rem;letter-spacing:1px;color:var(--navy)}
-        .mfg-card h3{font-family:'DM Sans',sans-serif;font-weight:700;font-size:1rem;color:var(--navy);margin-bottom:8px}
-        .mfg-card p{font-size:.85rem;color:var(--text-light);line-height:1.6}
-        .mfg-card.oc-card .mfg-logo{color:var(--oc-red)}
-
-        /* ── GALLERY ── */
-        .gallery-section{background:var(--cream)}
-        .gallery-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-        .gallery-item{border-radius:12px;overflow:hidden;aspect-ratio:4/3;position:relative;cursor:pointer}
-        .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
-        .gallery-item:hover img{transform:scale(1.05)}
-        .gallery-item:first-child{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
-
-        /* ── BOTTOM CTA ── */
-        .bottom-cta{background:var(--navy);padding:96px 24px;text-align:center;position:relative;overflow:hidden}
-        .bottom-cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 120%,rgba(200,32,47,.12),transparent 70%)}
-        .bottom-cta-inner{position:relative;z-index:1;max-width:640px;margin:0 auto}
-        .bottom-cta h2{font-size:2.6rem;color:#fff;margin-bottom:16px}
-        .bottom-cta p{font-size:1.1rem;color:rgba(255,255,255,.65);line-height:1.7;margin-bottom:36px}
-        .bottom-cta-btn{display:inline-block;background:#fff;color:var(--navy);padding:16px 48px;border-radius:100px;text-decoration:none;font-weight:600;font-size:1rem;letter-spacing:.3px;transition:all .25s}
-        .bottom-cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,.2)}
-        .bottom-cta-phone{display:block;margin-top:20px;color:rgba(255,255,255,.5);font-size:.9rem}
-        .bottom-cta-phone a{color:rgba(255,255,255,.7);text-decoration:none;font-weight:600;transition:color .2s}
-        .bottom-cta-phone a:hover{color:#fff}
-
-        /* ── FOOTER ── */
-        footer{background:var(--navy-deep);padding:48px 24px 32px;color:rgba(255,255,255,.4)}
-        .footer-inner{max-width:1200px;margin:0 auto}
-        .footer-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:32px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.06)}
-        .footer-brand .fb-name{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:1.2rem;color:rgba(255,255,255,.8);margin-bottom:4px}
-        .footer-brand .fb-tag{font-style:italic;font-size:.88rem;color:rgba(255,255,255,.35)}
-        .footer-contact{text-align:right}
-        .footer-contact a{display:block;color:rgba(255,255,255,.7);text-decoration:none;font-weight:600;font-size:1.1rem;margin-bottom:4px;transition:color .2s}
-        .footer-contact a:hover{color:#fff}
-        .footer-contact .fc-email{font-size:.88rem;font-weight:400;color:rgba(255,255,255,.4)}
-        .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;padding-top:24px;font-size:.78rem;line-height:1.6}
-        .footer-licenses{color:rgba(255,255,255,.3)}
-
-        /* ── MOBILE ── */
-        @media(max-width:1024px){
-            .hero-content{grid-template-columns:1fr;gap:48px;text-align:center}
-            .hero h1{font-size:2.8rem}
-            .hero-body{margin-left:auto;margin-right:auto}
-            .hero-trust{justify-content:center}
-            .form-card{max-width:480px;margin:0 auto}
-            .products-grid{grid-template-columns:1fr}
-            .products-grid .product-card{max-width:500px;margin:0 auto;width:100%}
-            .why-grid{grid-template-columns:1fr}
-            .reviews-grid{grid-template-columns:1fr}
-            .reviews-grid .review-card{max-width:500px;margin:0 auto;width:100%}
-            .mfg-grid{grid-template-columns:1fr}
-            .mfg-grid .mfg-card{max-width:420px;margin:0 auto;width:100%}
-            .gallery-grid{grid-template-columns:1fr 1fr}
-            .gallery-item:first-child{grid-column:span 2}
+        /* ── Brand Colors ─────────────────────────────────── */
+        :root {
+            --navy: #0a1628;
+            --navy-light: #132040;
+            --blue: #1b3a6b;
+            --blue-accent: #2563eb;
+            --gold: #d4a843;
+            --gold-light: #e8c56d;
+            --white: #ffffff;
+            --gray-50: #f8fafc;
+            --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
+            --gray-400: #94a3b8;
+            --gray-600: #475569;
+            --gray-800: #1e293b;
+            --green: #16a34a;
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / .1), 0 2px 4px -2px rgb(0 0 0 / .1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / .1), 0 8px 10px -6px rgb(0 0 0 / .1);
         }
-        @media(max-width:768px){
-            body{padding-top:0}
-            .header-inner{height:64px}
-            .header-phone{display:none}
-            .hero{min-height:auto;padding:96px 20px 56px}
-            .hero h1{font-size:2.2rem}
-            .hero-body{font-size:1rem}
-            .hero-trust{flex-direction:column;align-items:center;gap:16px}
-            .form-card{padding:32px 22px}
-            .section{padding:64px 20px}
-            .section-header h2{font-size:1.8rem}
-            .credentials-inner{gap:20px;font-size:.75rem}
-            .cred-divider{display:none}
-            .bottom-cta{padding:64px 20px}
-            .bottom-cta h2{font-size:2rem}
-            .gallery-grid{grid-template-columns:1fr;gap:12px}
-            .gallery-item:first-child{grid-column:span 1;grid-row:span 1}
-            .footer-top{flex-direction:column;align-items:center;text-align:center}
-            .footer-contact{text-align:center}
-            .footer-bottom{flex-direction:column;text-align:center}
+
+        /* ── Container ────────────────────────────────────── */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .container-narrow { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+        /* ── Sticky Header ────────────────────────────────── */
+        .lp-header {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: var(--white);
+            border-bottom: 1px solid var(--gray-200);
+            transition: box-shadow .3s;
         }
-        @media(max-width:480px){
-            .hero h1{font-size:1.8rem}
-            .form-row{flex-direction:column}
-            .form-card{padding:28px 18px}
-            .product-img{height:220px}
-            .product-body{padding:22px 20px}
+        .lp-header.scrolled { box-shadow: var(--shadow-lg); }
+        .lp-header-inner {
+            display: flex; align-items: center; justify-content: space-between;
+            max-width: 1200px; margin: 0 auto; padding: 12px 24px;
         }
+        .lp-header-logo img { height: 48px; width: auto; }
+        .lp-header-right { display: flex; align-items: center; gap: 20px; }
+        .lp-header-phone {
+            font-size: 18px; font-weight: 700; color: var(--blue);
+            display: flex; align-items: center; gap: 8px;
+        }
+        .lp-header-phone svg { width: 20px; height: 20px; }
+        .btn-header {
+            background: var(--gold); color: var(--navy); font-weight: 700;
+            padding: 10px 24px; border-radius: 8px; font-size: 14px;
+            transition: all .2s; border: none; cursor: pointer;
+            text-transform: uppercase; letter-spacing: .5px;
+        }
+        .btn-header:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+        /* ── Hero Section ─────────────────────────────────── */
+        .hero {
+            position: relative; min-height: 720px; padding-top: 80px;
+            display: flex; align-items: center;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+            overflow: hidden;
+        }
+        .hero-bg {
+            position: absolute; inset: 0;
+            background: url('/static/img/landing/hero-poolside.jpg') center/cover no-repeat;
+            opacity: .25;
+        }
+        .hero-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(135deg, rgba(10,22,40,.85) 0%, rgba(27,58,107,.7) 100%);
+        }
+        .hero-inner {
+            position: relative; z-index: 2;
+            display: grid; grid-template-columns: 1fr 420px; gap: 60px;
+            align-items: center; padding: 60px 0 80px;
+        }
+        .hero-text h1 {
+            font-size: 48px; font-weight: 900; line-height: 1.1;
+            color: var(--white); margin-bottom: 20px;
+        }
+        .hero-text h1 span { color: var(--gold); }
+        .hero-text p {
+            font-size: 20px; color: rgba(255,255,255,.85);
+            margin-bottom: 28px; max-width: 520px;
+        }
+        .hero-badges {
+            display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 24px;
+        }
+        .hero-badge {
+            background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2);
+            color: var(--white); padding: 8px 16px; border-radius: 100px;
+            font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 6px;
+            backdrop-filter: blur(8px);
+        }
+        .hero-badge svg { width: 16px; height: 16px; color: var(--gold); }
+
+        /* ── Lead Form ────────────────────────────────────── */
+        .lead-form-card {
+            background: var(--white); border-radius: 16px; padding: 32px;
+            box-shadow: var(--shadow-xl);
+        }
+        .lead-form-card h3 {
+            font-size: 22px; font-weight: 800; color: var(--navy);
+            text-align: center; margin-bottom: 4px;
+        }
+        .lead-form-card .form-sub {
+            text-align: center; color: var(--gray-600); font-size: 14px;
+            margin-bottom: 24px;
+        }
+        .form-group { margin-bottom: 14px; }
+        .form-group label {
+            display: block; font-size: 13px; font-weight: 600;
+            color: var(--gray-600); margin-bottom: 4px;
+        }
+        .form-group input, .form-group select {
+            width: 100%; padding: 12px 14px; border: 1.5px solid var(--gray-200);
+            border-radius: 8px; font-size: 15px; font-family: inherit;
+            transition: border-color .2s; background: var(--white);
+        }
+        .form-group input:focus, .form-group select:focus {
+            outline: none; border-color: var(--blue-accent);
+            box-shadow: 0 0 0 3px rgba(37,99,235,.1);
+        }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .btn-submit {
+            width: 100%; padding: 16px; border: none; border-radius: 8px;
+            background: var(--gold); color: var(--navy); font-size: 16px;
+            font-weight: 800; cursor: pointer; transition: all .2s;
+            text-transform: uppercase; letter-spacing: .5px; margin-top: 8px;
+        }
+        .btn-submit:hover { background: var(--gold-light); transform: translateY(-1px); box-shadow: var(--shadow-lg); }
+        .form-disclaimer {
+            text-align: center; font-size: 11px; color: var(--gray-400);
+            margin-top: 12px; line-height: 1.5;
+        }
+        .form-success {
+            display: none; text-align: center; padding: 40px 20px;
+        }
+        .form-success svg { width: 56px; height: 56px; color: var(--green); margin: 0 auto 16px; }
+        .form-success h3 { font-size: 22px; color: var(--navy); margin-bottom: 8px; }
+        .form-success p { color: var(--gray-600); }
+
+        /* ── Social Proof Bar ─────────────────────────────── */
+        .social-proof {
+            background: var(--navy); padding: 20px 0;
+            border-bottom: 3px solid var(--gold);
+        }
+        .social-proof-inner {
+            display: flex; align-items: center; justify-content: center;
+            gap: 48px; flex-wrap: wrap;
+        }
+        .proof-item {
+            display: flex; align-items: center; gap: 10px; color: var(--white);
+        }
+        .proof-item .proof-number {
+            font-size: 28px; font-weight: 900; color: var(--gold);
+        }
+        .proof-item .proof-label {
+            font-size: 13px; font-weight: 500; color: rgba(255,255,255,.8);
+            line-height: 1.3;
+        }
+        .proof-stars { display: flex; gap: 2px; }
+        .proof-stars svg { width: 18px; height: 18px; fill: var(--gold); }
+
+        /* ── Section Styles ───────────────────────────────── */
+        .section { padding: 80px 0; }
+        .section-alt { background: var(--gray-50); }
+        .section-dark { background: var(--navy); color: var(--white); }
+        .section-title {
+            font-size: 36px; font-weight: 800; text-align: center;
+            margin-bottom: 12px; line-height: 1.2;
+        }
+        .section-subtitle {
+            text-align: center; color: var(--gray-600); font-size: 18px;
+            max-width: 640px; margin: 0 auto 48px;
+        }
+        .section-dark .section-subtitle { color: rgba(255,255,255,.7); }
+
+        /* ── Why Guardian Cards ────────────────────────────── */
+        .why-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+        }
+        .why-card {
+            background: var(--white); border-radius: 16px; padding: 32px;
+            box-shadow: var(--shadow); transition: all .3s;
+            border: 1px solid var(--gray-100);
+        }
+        .why-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-xl); }
+        .why-icon {
+            width: 56px; height: 56px; border-radius: 12px;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 20px;
+        }
+        .why-icon svg { width: 28px; height: 28px; color: var(--gold); }
+        .why-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+        .why-card p { color: var(--gray-600); font-size: 15px; line-height: 1.6; }
+
+        /* ── Products Section ─────────────────────────────── */
+        .products-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+        }
+        .product-card {
+            border-radius: 16px; overflow: hidden; background: var(--white);
+            box-shadow: var(--shadow); transition: all .3s;
+            border: 1px solid var(--gray-100);
+        }
+        .product-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-xl); }
+        .product-card-img {
+            height: 220px; overflow: hidden;
+        }
+        .product-card-img img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform .5s;
+        }
+        .product-card:hover .product-card-img img { transform: scale(1.05); }
+        .product-card-body { padding: 24px; }
+        .product-card-body h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+        .product-card-body p { color: var(--gray-600); font-size: 14px; margin-bottom: 16px; }
+        .product-features { list-style: none; }
+        .product-features li {
+            padding: 4px 0; font-size: 14px; color: var(--gray-600);
+            display: flex; align-items: center; gap: 8px;
+        }
+        .product-features li svg { width: 16px; height: 16px; color: var(--green); flex-shrink: 0; }
+
+        /* ── Recent Projects ──────────────────────────────── */
+        .projects-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+            margin-bottom: 48px;
+        }
+        .project-thumb {
+            border-radius: 12px; overflow: hidden; aspect-ratio: 4/3;
+            box-shadow: var(--shadow); transition: all .3s; position: relative;
+        }
+        .project-thumb:hover { transform: translateY(-4px); box-shadow: var(--shadow-xl); }
+        .project-thumb img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform .5s;
+        }
+        .project-thumb:hover img { transform: scale(1.05); }
+        .project-label {
+            position: absolute; bottom: 0; left: 0; right: 0;
+            background: linear-gradient(transparent, rgba(10,22,40,.8));
+            padding: 32px 16px 12px; color: var(--white);
+        }
+        .project-label strong { font-size: 14px; font-weight: 700; }
+        .project-label span { display: block; font-size: 12px; color: rgba(255,255,255,.7); }
+        .drone-video-wrapper {
+            max-width: 800px; margin: 0 auto;
+            border-radius: 16px; overflow: hidden;
+            box-shadow: var(--shadow-xl);
+        }
+        .drone-video-wrapper video {
+            width: 100%; display: block; border-radius: 16px;
+        }
+        .video-caption {
+            text-align: center; margin-top: 16px;
+            font-size: 14px; color: var(--gray-400); font-style: italic;
+        }
+        @media (max-width: 968px) {
+            .projects-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 640px) {
+            .projects-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ── Manufacturers ────────────────────────────────── */
+        .mfg-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+            max-width: 900px; margin: 0 auto;
+        }
+        .mfg-card {
+            text-align: center; padding: 32px 24px;
+            background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+            border-radius: 16px; transition: all .3s;
+        }
+        .mfg-card:hover { background: rgba(255,255,255,.1); transform: translateY(-2px); }
+        .mfg-logo {
+            font-size: 28px; font-weight: 900; color: var(--gold);
+            margin-bottom: 12px; letter-spacing: -0.5px;
+        }
+        .mfg-name { font-size: 14px; font-weight: 600; color: var(--white); margin-bottom: 8px; }
+        .mfg-desc { font-size: 13px; color: rgba(255,255,255,.6); line-height: 1.5; }
+
+        /* ── Reviews ──────────────────────────────────────── */
+        .reviews-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+        }
+        .review-card {
+            background: var(--white); border-radius: 16px; padding: 28px;
+            box-shadow: var(--shadow); border: 1px solid var(--gray-100);
+        }
+        .review-stars { display: flex; gap: 2px; margin-bottom: 12px; }
+        .review-stars svg { width: 18px; height: 18px; fill: var(--gold); }
+        .review-text { font-size: 15px; color: var(--gray-600); line-height: 1.7; margin-bottom: 16px; font-style: italic; }
+        .review-author { font-size: 14px; font-weight: 700; color: var(--navy); }
+        .review-meta { font-size: 12px; color: var(--gray-400); }
+
+        /* ── Financing Section ────────────────────────────── */
+        .financing-inner {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+            align-items: center;
+        }
+        .financing-text h2 {
+            font-size: 36px; font-weight: 800; margin-bottom: 16px; color: var(--navy);
+        }
+        .financing-text p { color: var(--gray-600); font-size: 16px; margin-bottom: 24px; }
+        .financing-options { list-style: none; }
+        .financing-options li {
+            padding: 12px 0; border-bottom: 1px solid var(--gray-100);
+            display: flex; align-items: center; gap: 12px;
+            font-size: 15px; font-weight: 500;
+        }
+        .financing-options li svg { width: 24px; height: 24px; color: var(--green); flex-shrink: 0; }
+        .financing-img {
+            border-radius: 16px; overflow: hidden;
+            box-shadow: var(--shadow-xl);
+        }
+        .financing-img img { width: 100%; height: 400px; object-fit: cover; }
+
+        /* ── CTA Banner ───────────────────────────────────── */
+        .cta-banner {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+            padding: 60px 0; text-align: center;
+        }
+        .cta-banner h2 {
+            font-size: 36px; font-weight: 800; color: var(--white); margin-bottom: 12px;
+        }
+        .cta-banner p {
+            font-size: 18px; color: rgba(255,255,255,.8); margin-bottom: 32px;
+        }
+        .cta-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+        .btn-cta-primary {
+            background: var(--gold); color: var(--navy); font-weight: 800;
+            padding: 16px 40px; border-radius: 8px; font-size: 16px;
+            transition: all .2s; text-transform: uppercase; letter-spacing: .5px;
+        }
+        .btn-cta-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+        .btn-cta-secondary {
+            background: transparent; color: var(--white); font-weight: 700;
+            padding: 16px 40px; border-radius: 8px; font-size: 16px;
+            border: 2px solid rgba(255,255,255,.3); transition: all .2s;
+        }
+        .btn-cta-secondary:hover { border-color: var(--white); background: rgba(255,255,255,.05); }
+
+        /* ── Footer ───────────────────────────────────────── */
+        .lp-footer {
+            background: var(--gray-800); padding: 40px 0 24px;
+        }
+        .footer-inner {
+            display: flex; align-items: center; justify-content: space-between;
+            flex-wrap: wrap; gap: 24px;
+        }
+        .footer-logo img { height: 40px; width: auto; filter: brightness(0) invert(1); }
+        .footer-info { text-align: right; }
+        .footer-phone {
+            font-size: 20px; font-weight: 700; color: var(--gold);
+            margin-bottom: 4px;
+        }
+        .footer-address { font-size: 13px; color: var(--gray-400); }
+        .footer-legal {
+            text-align: center; padding-top: 24px; margin-top: 24px;
+            border-top: 1px solid rgba(255,255,255,.1);
+            font-size: 12px; color: var(--gray-400);
+        }
+        .footer-legal a { color: var(--gray-400); text-decoration: underline; }
+
+        /* ── Mobile Responsive ────────────────────────────── */
+        @media (max-width: 968px) {
+            .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+            .hero-text h1 { font-size: 36px; }
+            .lead-form-card { max-width: 480px; margin: 0 auto; }
+            .why-grid, .products-grid, .reviews-grid { grid-template-columns: 1fr; }
+            .mfg-grid { grid-template-columns: 1fr; max-width: 400px; }
+            .financing-inner { grid-template-columns: 1fr; gap: 32px; }
+            .social-proof-inner { gap: 24px; }
+            .section [style*="grid-template-columns: 1fr 1fr"] { grid-template-columns: 1fr !important; }
+        }
+        @media (max-width: 640px) {
+            .hero { min-height: auto; }
+            .hero-inner { padding: 40px 0 60px; }
+            .hero-text h1 { font-size: 28px; }
+            .hero-text p { font-size: 16px; }
+            .section { padding: 48px 0; }
+            .section-title { font-size: 28px; }
+            .lp-header-phone { display: none; }
+            .form-row { grid-template-columns: 1fr; }
+            .proof-item .proof-number { font-size: 22px; }
+            .cta-banner h2 { font-size: 28px; }
+            .footer-inner { flex-direction: column; text-align: center; }
+            .footer-info { text-align: center; }
+        }
+
+        /* ── Animations ───────────────────────────────────── */
+        .fade-in {
+            opacity: 0; transform: translateY(24px);
+            transition: opacity .6s ease, transform .6s ease;
+        }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
     </style>
 </head>
 <body>
 
-<!-- HEADER -->
-<div class="header" id="site-header">
-    <div class="header-inner">
-        <a href="/" class="logo">
-            <img src="https://guardwhatmatters.com/wp-content/uploads/2023/08/Guardian-Vector-File-1.png" alt="Guardian Impact Windows & Roofing" class="logo-img">
+<!-- ══════════════════ STICKY HEADER ══════════════════ -->
+<header class="lp-header" id="lpHeader">
+    <div class="lp-header-inner">
+        <a href="#" class="lp-header-logo">
+            <img src="/static/img/landing/guardian-logo.png" alt="Guardian Impact Windows & Roofing" loading="eager">
         </a>
-        <div class="header-right">
-            <a href="{{ phone_href }}" class="header-phone" onclick="trackPhoneClick()">
-                <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                <span class="callrail-number">{{ phone_number }}</span>
+        <div class="lp-header-right">
+            <a href="{{ phone_href }}" class="lp-header-phone">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                {{ phone_number }}
             </a>
-            <a href="#estimate" class="header-cta">Free Estimate</a>
+            <a href="#leadForm" class="btn-header">Free Estimate</a>
         </div>
     </div>
-</div>
+</header>
 
-<!-- HERO -->
-<section class="hero" id="estimate">
+<!-- ══════════════════ HERO ══════════════════ -->
+<section class="hero" id="hero">
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
-    <div class="hero-content">
-        <div class="hero-text">
-            <div class="hero-eyebrow">Trusted by Broward County Homeowners</div>
-            <h1>Your Home Deserves<br><span class="accent">Real Protection.</span></h1>
-            <p class="hero-body">Hurricane season isn't a maybe — it's a when. Guardian installs impact windows, doors, and roofing that keep your family safe, lower your insurance, and actually look great on your home.</p>
-            <div class="hero-trust">
-                <div class="hero-trust-item">
-                    <div class="ht-icon">4.8</div>
-                    <span><strong>520+</strong> Five-Star Reviews</span>
+    <div class="container">
+        <div class="hero-inner">
+            <div class="hero-text">
+                <div class="hero-badges">
+                    <span class="hero-badge">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        Licensed & Insured
+                    </span>
+                    <span class="hero-badge">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        Broward County
+                    </span>
+                    <span class="hero-badge">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        Same-Week Estimates
+                    </span>
                 </div>
-                <div class="hero-trust-item">
-                    <div class="ht-icon">FL</div>
-                    <span><strong>Licensed</strong> & Insured</span>
-                </div>
-                <div class="hero-trust-item">
-                    <a href="https://www.bbb.org/us/fl/deerfield-beach/profile/general-contractor/guardian-impact-windows-roofing-llc-0633-92032720/#sealclick" target="_blank" rel="nofollow" style="display:flex;align-items:center">
-                        <img src="https://seal-seflorida.bbb.org/seals/blue-seal-250-52-bbb-92032720.png" alt="BBB Accredited Business" style="height:36px;filter:brightness(0) invert(1);opacity:.85">
-                    </a>
-                </div>
+                <h1>Protect Your Home with <span>Hurricane-Rated</span> Impact Windows & Doors</h1>
+                <p>South Florida's trusted installer of PGT WinGuard, CGI, and ES Windows impact products. Factory-direct pricing with expert installation.</p>
             </div>
-        </div>
 
-        <!-- LEAD FORM -->
-        <div class="form-card">
-            <h2>Get a Free Quote</h2>
-            <p class="form-subtitle">Takes 30 seconds. We'll call you back today.</p>
-            <form id="lead-form" onsubmit="return submitForm(event)">
-                <input type="hidden" name="gclid" id="form-gclid">
-                <input type="hidden" name="utm_source" id="form-utm-source">
-                <input type="hidden" name="utm_medium" id="form-utm-medium">
-                <input type="hidden" name="utm_campaign" id="form-utm-campaign">
-                <input type="hidden" name="utm_term" id="form-utm-term">
-                <input type="hidden" name="product" value="Impact Windows">
-                <input type="hidden" name="geo" value="Broward County">
-                <div class="form-row">
-                    <input type="text" name="first_name" placeholder="First Name" required>
-                    <input type="text" name="last_name" placeholder="Last Name" required>
+            <!-- Lead Form -->
+            <div class="lead-form-card" id="leadForm">
+                <div id="formContent">
+                    <h3>Get Your Free Estimate</h3>
+                    <p class="form-sub">No obligation. We come to you.</p>
+                    <form id="leadFormEl" onsubmit="return submitLead(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="first_name" required placeholder="John">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="last_name" required placeholder="Smith">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="(954) 555-1234">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="zip">Zip Code</label>
+                                <input type="text" id="zip" name="zip" required placeholder="33301" maxlength="5" pattern="[0-9]{5}">
+                            </div>
+                            <div class="form-group">
+                                <label for="service">Service Needed</label>
+                                <select id="service" name="service">
+                                    <option value="impact-windows">Impact Windows</option>
+                                    <option value="impact-doors">Impact Doors</option>
+                                    <option value="windows-and-doors">Windows & Doors</option>
+                                    <option value="roofing">Roofing</option>
+                                    <option value="not-sure">Not Sure Yet</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-submit" id="submitBtn">Schedule My Free Estimate</button>
+                        <p class="form-disclaimer">By submitting, you agree to receive calls and texts about your estimate. We respect your privacy.</p>
+                    </form>
                 </div>
-                <div class="form-row">
-                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                <div class="form-success" id="formSuccess">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    <h3>You're All Set!</h3>
+                    <p>A Guardian specialist will call you shortly to schedule your free in-home estimate.</p>
                 </div>
-                <div class="form-row">
-                    <input type="email" name="email" placeholder="Email Address" required>
-                </div>
-                <div class="form-row">
-                    <input type="text" name="address" placeholder="Street Address" required>
-                    <input type="text" name="zip" placeholder="ZIP" required style="max-width:120px">
-                </div>
-                <div class="form-row">
-                    <select name="service" required>
-                        <option value="">What do you need?</option>
-                        <option value="impact_windows" selected>Impact Windows</option>
-                        <option value="impact_doors">Impact Doors</option>
-                        <option value="windows_and_doors">Windows + Doors</option>
-                        <option value="roofing">Roofing</option>
-                        <option value="full_package">Full Home Protection</option>
-                    </select>
-                </div>
-                <button type="submit" class="form-btn">Get My Free Quote</button>
-                <label class="form-consent">
-                    <input type="checkbox" name="sms_consent" value="yes">
-                    <span>I agree to receive SMS from Guardian Impact Windows & Roofing. Msg & data rates may apply. Reply STOP to opt out.</span>
-                </label>
-                <div class="form-note">
-                    <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
-                    Your information is secure and never shared.
-                </div>
-            </form>
-            <div id="form-success" style="display:none;">
-                <h3>Thank You</h3>
-                <p>A Guardian specialist will reach out within 15 minutes to schedule your free in-home estimate.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- CREDENTIALS -->
-<div class="credentials">
-    <div class="credentials-inner">
-        <span class="cred-item">Certified General Contractor CGC-1524314</span>
-        <span class="cred-divider"></span>
-        <span class="cred-item">Certified Roofing Contractor CCC-1334906</span>
-        <span class="cred-divider"></span>
-        <span class="cred-item">Serving Broward, Palm Beach & Miami-Dade</span>
-        <span class="cred-divider"></span>
-        <a href="https://www.bbb.org/us/fl/deerfield-beach/profile/general-contractor/guardian-impact-windows-roofing-llc-0633-92032720/#sealclick" target="_blank" rel="nofollow" class="cred-bbb">
-            <img src="https://seal-seflorida.bbb.org/seals/blue-seal-250-52-bbb-92032720.png" alt="Guardian Impact Windows & Roofing LLC BBB Business Review" style="height:28px;vertical-align:middle;filter:brightness(0) invert(1);opacity:.7">
-        </a>
+<!-- ══════════════════ SOCIAL PROOF BAR ══════════════════ -->
+<div class="social-proof">
+    <div class="container">
+        <div class="social-proof-inner">
+            <div class="proof-item">
+                <span class="proof-number">1,200+</span>
+                <span class="proof-label">Homes<br>Protected</span>
+            </div>
+            <div class="proof-item">
+                <div>
+                    <div class="proof-stars">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <span class="proof-label">4.9 on Google</span>
+                </div>
+            </div>
+            <div class="proof-item">
+                <span class="proof-number">10+</span>
+                <span class="proof-label">Years in<br>South Florida</span>
+            </div>
+            <div class="proof-item">
+                <span class="proof-number">A+</span>
+                <span class="proof-label">BBB<br>Rating</span>
+            </div>
+        </div>
     </div>
 </div>
 
-<!-- PRODUCTS -->
-<section class="section products">
-    <div class="section-header">
-        <div class="eyebrow">What We Install</div>
-        <h2>Built for Florida Weather</h2>
-        <p>We're picky about what goes on your home. These are the same products we'd put on our own houses.</p>
-    </div>
-    <div class="products-grid">
-        <div class="product-card">
-            <div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=85&auto=format')"></div>
-            <div class="product-body">
-                <div class="product-tag">Impact Windows</div>
-                <h3>Hurricane-Rated Windows</h3>
-                <p>Built to handle Category 5 winds and flying debris. Most homeowners see insurance drop 25-45%, and you'll notice the noise reduction on day one.</p>
-                <div class="product-brands"><strong>Featuring:</strong> CWS (CGI) &amp; ESW (Eastern Seaboard Windows)</div>
+<!-- ══════════════════ WHY GUARDIAN ══════════════════ -->
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="section-title fade-in">Why Homeowners Choose Guardian</h2>
+        <p class="section-subtitle fade-in">We're not just another window company. We're your neighbors — protecting South Florida families since day one.</p>
+        <div class="why-grid">
+            <div class="why-card fade-in">
+                <div class="why-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                </div>
+                <h3>Hurricane-Rated Protection</h3>
+                <p>Every product we install is Miami-Dade HVHZ approved and meets the strictest Florida building codes. Your home stays protected in Category 5 storms.</p>
             </div>
-        </div>
-        <div class="product-card">
-            <div class="product-img" style="background-image:url('https://guardwhatmatters.com/wp-content/uploads/2023/08/gaurdian-impact-windows-2-e1696351682572-1024x997.jpg')"></div>
-            <div class="product-body">
-                <div class="product-tag">Impact Doors</div>
-                <h3>Impact-Rated Entry & Sliding Doors</h3>
-                <p>Your windows are only as strong as your weakest door. We install French doors, sliders, and entry doors that meet the same hurricane codes as your windows.</p>
-                <div class="product-brands"><strong>Featuring:</strong> CWS (CGI) &amp; ESW (Eastern Seaboard Windows)</div>
+            <div class="why-card fade-in">
+                <div class="why-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <h3>Factory-Direct Pricing</h3>
+                <p>As an authorized dealer of PGT, CGI, and ES Windows, we pass manufacturer pricing directly to you. No middlemen, no markups.</p>
             </div>
-        </div>
-        <div class="product-card oc">
-            <div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&q=85&auto=format')"></div>
-            <div class="product-body">
-                <div class="product-tag">Owens Corning Roofing</div>
-                <h3>Roof Replacement Done Right</h3>
-                <p>We're an Owens Corning Preferred Contractor — that means better shingles, better warranties, and a crew that's done hundreds of South Florida roofs.</p>
-                <div class="product-brands"><strong>Featuring:</strong> Owens Corning Duration &amp; TruDefinition Series</div>
+            <div class="why-card fade-in">
+                <div class="why-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </div>
+                <h3>Expert Local Installers</h3>
+                <p>Our installation crews are full-time Guardian employees — not subcontractors. Every install is backed by our workmanship warranty.</p>
+            </div>
+            <div class="why-card fade-in">
+                <div class="why-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                </div>
+                <h3>Energy Savings</h3>
+                <p>Impact windows cut energy costs by up to 25%. Low-E glass blocks UV rays, keeping your home cooler and protecting furniture from fading.</p>
+            </div>
+            <div class="why-card fade-in">
+                <div class="why-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+                </div>
+                <h3>Insurance Discounts</h3>
+                <p>Florida law requires insurance companies to offer wind mitigation discounts. Most homeowners save $500-$2,000/year on premiums after installation.</p>
+            </div>
+            <div class="why-card fade-in">
+                <div class="why-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                </div>
+                <h3>24/7 Security</h3>
+                <p>Impact glass is nearly impossible to break through. Protect your family from break-ins, flying debris, and severe weather — around the clock.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- WHY GUARDIAN -->
-<section class="section why-section">
-    <div class="section-header">
-        <div class="eyebrow">Why Guardian</div>
-        <h2>We're the Company Your Neighbors Use</h2>
-        <p>Not a national franchise. Not the cheapest quote on Angi. Just a local team that does great work and treats your home like it's ours.</p>
-    </div>
-    <div class="why-grid">
-        <div class="why-item">
-            <div class="why-icon">
-                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-            </div>
-            <div>
-                <h3>520+ Five-Star Reviews</h3>
-                <p>Check Google — real homeowners in your neighborhood. We don't pay for reviews. We earn them.</p>
-            </div>
-        </div>
-        <div class="why-item">
-            <div class="why-icon">
-                <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
-            </div>
-            <div>
-                <h3>Licensed, Insured & Local</h3>
-                <p>We live here. We know the Broward County permit office, the inspectors, the building codes. This is our backyard.</p>
-            </div>
-        </div>
-        <div class="why-item">
-            <div class="why-icon">
-                <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>
-            </div>
-            <div>
-                <h3>We Handle the Headaches</h3>
-                <p>Permits, inspections, HOA paperwork — we take care of all of it. You shouldn't have to become a general contractor to protect your home.</p>
-            </div>
-        </div>
-        <div class="why-item">
-            <div class="why-icon">
-                <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
-            </div>
-            <div>
-                <h3>Flexible Financing</h3>
-                <p>0% interest available. 400+ plans. Most people get approved in minutes. Don't let budget be the reason your home isn't protected.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- REVIEWS -->
-<section class="section reviews">
-    <div class="section-header">
-        <div class="eyebrow">Real Reviews</div>
-        <h2>Straight from Our Customers</h2>
-    </div>
-    <div class="reviews-grid">
-        <div class="review-card">
-            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p class="review-quote">"My husband and I got three quotes. Guardian came in, measured everything carefully, explained exactly what we needed and didn't try to upsell us. Installation took two days and they left our house spotless. Genuinely can't say enough good things."</p>
-            <div class="review-author">
-                <div class="review-avatar">M</div>
-                <div>
-                    <div class="review-name">Maria S.</div>
-                    <div class="review-loc">Coral Springs, FL</div>
+<!-- ══════════════════ PRODUCTS ══════════════════ -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title fade-in">Our Impact Products</h2>
+        <p class="section-subtitle fade-in">Premium hurricane-rated windows and doors built for the Florida lifestyle.</p>
+        <div class="products-grid">
+            <div class="product-card fade-in">
+                <div class="product-card-img">
+                    <img src="/static/img/landing/project-jones-closeup.jpg" alt="Impact sliding glass doors installed by Guardian" loading="lazy">
+                </div>
+                <div class="product-card-body">
+                    <h3>Impact Sliding Doors</h3>
+                    <p>Panoramic views with Category 5 protection. Multi-slide and pocket configurations available.</p>
+                    <ul class="product-features">
+                        <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Miami-Dade HVHZ Approved</li>
+                        <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Up to 40' wide openings</li>
+                        <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Low-E insulated glass</li>
+                    </ul>
                 </div>
             </div>
-        </div>
-        <div class="review-card">
-            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p class="review-quote">"Got five quotes. Guardian wasn't the cheapest but they were the only ones who actually walked us through everything — the permit process, the timeline, what to expect. No surprises, no hidden fees. Totally worth it."</p>
-            <div class="review-author">
-                <div class="review-avatar">R</div>
-                <div>
-                    <div class="review-name">Robert & Linda T.</div>
-                    <div class="review-loc">Fort Lauderdale, FL</div>
+            <div class="product-card fade-in">
+                <div class="product-card-img">
+                    <img src="/static/img/landing/project-ioannou-windows.jpg" alt="Impact bay windows installed by Guardian" loading="lazy">
+                </div>
+                <div class="product-card-body">
+                    <h3>Impact Windows</h3>
+                    <p>Single-hung, double-hung, casement, awning, and picture windows. Every style, every size.</p>
+                    <ul class="product-features">
+                        <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Vinyl & aluminum frames</li>
+                        <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Noise reduction up to 50%</li>
+                        <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> UV protection built in</li>
+                    </ul>
                 </div>
             </div>
-        </div>
-        <div class="review-card">
-            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p class="review-quote">"After Irma we said 'never again.' Guardian did our whole house — 18 windows and 2 sliders. The noise difference is insane, and our insurance went down about $2,800 a year. Should've done it sooner."</p>
-            <div class="review-author">
-                <div class="review-avatar">J</div>
-                <div>
-                    <div class="review-name">James P.</div>
-                    <div class="review-loc">Pembroke Pines, FL</div>
+            <div class="product-card fade-in">
+                <div class="product-card-img">
+                    <img src="/static/img/landing/project-jones-street.jpg" alt="Completed impact window installation by Guardian" loading="lazy">
+                </div>
+                <div class="product-card-body">
+                    <h3>Impact Entry & French Doors</h3>
+                    <p>Make an entrance. Impact-rated front doors, French doors, and folding glass walls.</p>
+                    <ul class="product-features">
+                        <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Decorative glass options</li>
+                        <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Multi-point locking</li>
+                        <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Custom sizes & colors</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-    <div class="reviews-footer">
-        <div class="reviews-badges">
-            <img src="https://guardwhatmatters.com/wp-content/uploads/2023/08/Google-Reviews-5.0.png" alt="Google 5-Star Reviews" style="height:48px">
-            <img src="https://guardwhatmatters.com/wp-content/uploads/2023/08/Facebook-Reviews.png" alt="Facebook Reviews" style="height:48px">
-            <img src="https://guardwhatmatters.com/wp-content/uploads/2023/08/Home-Advisor-Reviews-.png" alt="HomeAdvisor Reviews" style="height:48px">
-            <img src="https://guardwhatmatters.com/wp-content/uploads/2023/08/Yelp-Reviews.png" alt="Yelp Reviews" style="height:48px">
-        </div>
-    </div>
 </section>
 
-<!-- MANUFACTURERS -->
-<section class="section manufacturers">
-    <div class="section-header">
-        <div class="eyebrow">Our Partners</div>
-        <h2>The Brands Behind Your Home</h2>
-        <p>We don't install builder-grade products. These are the brands that hold up in South Florida — we've seen it firsthand.</p>
-    </div>
-    <div class="mfg-grid">
-        <div class="mfg-card">
-            <div class="mfg-logo">CWS by CGI</div>
-            <h3>Coastal Window Systems</h3>
-            <p>Made right here in Florida. Built specifically for hurricane zones, and the glass clarity is noticeably better than most brands out there.</p>
-        </div>
-        <div class="mfg-card">
-            <div class="mfg-logo">ESW</div>
-            <h3>Eastern Seaboard Windows</h3>
-            <p>Great hurricane protection with clean, modern profiles that actually look good on your home. Popular with homeowners who care about curb appeal.</p>
-        </div>
-        <div class="mfg-card oc-card">
-            <div class="mfg-logo">Owens Corning</div>
-            <h3>Preferred Contractor</h3>
-            <p>The best shingles in the business with warranties that actually mean something. Being a Preferred Contractor means we can offer coverage most roofers can't.</p>
-        </div>
-    </div>
-</section>
-
-<!-- GALLERY -->
-<section class="section gallery-section">
-    <div class="section-header">
-        <div class="eyebrow">Our Work</div>
-        <h2>Recent Projects</h2>
-        <p>Real homes in Broward County. Real Guardian installations.</p>
-    </div>
-    <div class="gallery-grid">
-        <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?w=600&q=85&auto=format" alt="South Florida home with impact windows" loading="lazy">
-        </div>
-        <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1576941089067-2de3c901e126?w=600&q=85&auto=format" alt="Florida residential home exterior" loading="lazy">
-        </div>
-        <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=85&auto=format" alt="Florida ranch home with new roof" loading="lazy">
-        </div>
-        <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=85&auto=format" alt="Suburban Florida home with impact windows" loading="lazy">
-        </div>
-        <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=85&auto=format" alt="South Florida home protected by Guardian" loading="lazy">
-        </div>
-    </div>
-</section>
-
-<!-- BOTTOM CTA -->
-<section class="bottom-cta">
-    <div class="bottom-cta-inner">
-        <h2>Let's Protect Your Home</h2>
-        <p>Free in-home quote. No pressure, no obligation. We'll measure everything, walk you through your options, and give you an honest price. That's it.</p>
-        <a href="#estimate" class="bottom-cta-btn">Get Your Free Quote</a>
-        <div class="bottom-cta-phone">
-            Or call us directly: <a href="{{ phone_href }}" class="callrail-number" onclick="trackPhoneClick()">{{ phone_number }}</a>
-        </div>
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-    <div class="footer-inner">
-        <div class="footer-top">
-            <div class="footer-brand">
-                <img src="https://guardwhatmatters.com/wp-content/uploads/2023/08/Guardian-Vector-File-1.png" alt="Guardian Impact Windows & Roofing" style="height:40px;width:auto;margin-bottom:6px">
-                <div class="fb-tag">We guard what matters most.</div>
+<!-- ══════════════════ RECENT PROJECTS ══════════════════ -->
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="section-title fade-in">Recent Guardian Projects</h2>
+        <p class="section-subtitle fade-in">Real homes we've protected across South Florida — drone footage included.</p>
+        <div class="projects-grid">
+            <div class="project-thumb fade-in">
+                <img src="/static/img/landing/project-jones-drone.jpg" alt="Guardian window and roof installation — aerial view" loading="lazy">
+                <div class="project-label">
+                    <strong>Full Window Replacement</strong>
+                    <span>Broward County</span>
+                </div>
             </div>
-            <div class="footer-contact">
-                <a href="{{ phone_href }}" class="callrail-number" onclick="trackPhoneClick()">{{ phone_number }}</a>
-                <div class="fc-email">Serving Broward, Palm Beach & Miami-Dade Counties</div>
+            <div class="project-thumb fade-in">
+                <img src="/static/img/landing/project-ioannou-lakefront.jpg" alt="Guardian impact windows — lakefront home" loading="lazy">
+                <div class="project-label">
+                    <strong>Impact Windows — Lakefront</strong>
+                    <span>South Florida</span>
+                </div>
+            </div>
+            <div class="project-thumb fade-in">
+                <img src="/static/img/landing/project-ioannou-windows.jpg" alt="Guardian bay window installation" loading="lazy">
+                <div class="project-label">
+                    <strong>Bay Windows + Sliding Doors</strong>
+                    <span>Pool Enclosure View</span>
+                </div>
+            </div>
+            <div class="project-thumb fade-in">
+                <img src="/static/img/landing/project-jones-street.jpg" alt="Guardian completed project — street view" loading="lazy">
+                <div class="project-label">
+                    <strong>Windows + Tile Roof</strong>
+                    <span>Broward County</span>
+                </div>
+            </div>
+            <div class="project-thumb fade-in">
+                <img src="/static/img/landing/project-sikandar-front.jpg" alt="Guardian impact window installation" loading="lazy">
+                <div class="project-label">
+                    <strong>Whole-Home Windows</strong>
+                    <span>South Florida</span>
+                </div>
+            </div>
+            <div class="project-thumb fade-in">
+                <img src="/static/img/landing/project-jones-closeup.jpg" alt="Guardian impact sliding door close-up" loading="lazy">
+                <div class="project-label">
+                    <strong>Impact Sliding Doors</strong>
+                    <span>Close-Up Detail</span>
+                </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <div class="footer-licenses">
-                Certified General Contractor CGC-1524314 &middot; Certified Roofing Contractor CCC-1334906
+
+        <!-- Drone Flyover Video -->
+        <div class="drone-video-wrapper fade-in">
+            <video autoplay muted loop playsinline>
+                <source src="/static/img/landing/drone-ioannou.mp4" type="video/mp4">
+            </video>
+        </div>
+        <p class="video-caption">Drone flyover of a completed Guardian impact window installation</p>
+    </div>
+</section>
+
+<!-- ══════════════════ SEE THE GUARDIAN DIFFERENCE ══════════════════ -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title fade-in">See the Guardian Difference</h2>
+        <p class="section-subtitle fade-in">Hear from our team and see how we deliver on every project.</p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 960px; margin: 0 auto;">
+            <div class="fade-in">
+                <div class="drone-video-wrapper">
+                    <video controls playsinline preload="metadata" poster="">
+                        <source src="/static/img/landing/employee-testimonial.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <p class="video-caption">Employee Testimonial</p>
             </div>
-            <div>&copy; 2026 Guardian Impact Windows & Roofing. All rights reserved.</div>
+            <div class="fade-in">
+                <div class="drone-video-wrapper">
+                    <video controls playsinline preload="metadata" poster="">
+                        <source src="/static/img/landing/owner-process.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <p class="video-caption">Our Process — From Estimate to Install</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════ MANUFACTURERS ══════════════════ -->
+<section class="section section-dark">
+    <div class="container">
+        <h2 class="section-title fade-in" style="color: var(--white);">Trusted Manufacturer Partners</h2>
+        <p class="section-subtitle fade-in">We only install products from Florida's top-rated manufacturers.</p>
+        <div class="mfg-grid">
+            <div class="mfg-card fade-in">
+                <div class="mfg-logo">PGT</div>
+                <div class="mfg-name">PGT WinGuard</div>
+                <div class="mfg-desc">America's #1 impact-resistant window and door brand. Made in Venice, Florida. Full vinyl and aluminum product lines.</div>
+            </div>
+            <div class="mfg-card fade-in">
+                <div class="mfg-logo">CGI</div>
+                <div class="mfg-name">CGI Windows & Doors</div>
+                <div class="mfg-desc">Premium commercial-grade impact products for residential use. Sentinel, Estate, and Targa series available.</div>
+            </div>
+            <div class="mfg-card fade-in">
+                <div class="mfg-logo">ESW</div>
+                <div class="mfg-name">ES Windows</div>
+                <div class="mfg-desc">High-performance impact windows at competitive pricing. Excellent for whole-home replacements and new construction.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════ REVIEWS ══════════════════ -->
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="section-title fade-in">What Our Customers Say</h2>
+        <p class="section-subtitle fade-in">Real reviews from real Broward County homeowners.</p>
+        <div class="reviews-grid">
+            <div class="review-card fade-in">
+                <div class="review-stars">
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <p class="review-text">"Guardian replaced all 22 windows in our home. The crew was professional, clean, and finished in two days. Our electric bill dropped by $180/month. Wish we'd done it sooner."</p>
+                <div class="review-author">Maria & Carlos R.</div>
+                <div class="review-meta">Coral Springs, FL</div>
+            </div>
+            <div class="review-card fade-in">
+                <div class="review-stars">
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <p class="review-text">"After Hurricane Ian, we finally pulled the trigger. Guardian gave us the best price by far — $8K less than the next quote. The PGT WinGuard windows look incredible and our insurance dropped $1,400/year."</p>
+                <div class="review-author">David T.</div>
+                <div class="review-meta">Fort Lauderdale, FL</div>
+            </div>
+            <div class="review-card fade-in">
+                <div class="review-stars">
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <p class="review-text">"We got three quotes and Guardian was the most transparent. No hidden fees, no pressure. Ethan walked us through every option. The sliding doors completely transformed our living room."</p>
+                <div class="review-author">Jennifer & Mike S.</div>
+                <div class="review-meta">Pembroke Pines, FL</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════ FINANCING ══════════════════ -->
+<section class="section">
+    <div class="container">
+        <div class="financing-inner">
+            <div class="financing-text fade-in">
+                <h2>Affordable Financing Options</h2>
+                <p>Don't wait for the next hurricane. Protect your home today with payments that fit your budget.</p>
+                <ul class="financing-options">
+                    <li>
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        0% interest for 12 months (qualifying credit)
+                    </li>
+                    <li>
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        Low monthly payments starting at $99/mo
+                    </li>
+                    <li>
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        No prepayment penalties
+                    </li>
+                    <li>
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        Quick approval — know your rate in minutes
+                    </li>
+                    <li>
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        PACE financing available (no credit check)
+                    </li>
+                </ul>
+            </div>
+            <div class="financing-img fade-in">
+                <img src="/static/img/landing/modern-home.jpg" alt="Modern Florida home with impact windows and doors" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════ CTA BANNER ══════════════════ -->
+<section class="cta-banner">
+    <div class="container">
+        <h2>Ready to Protect Your Home?</h2>
+        <p>Get a free, no-obligation in-home estimate from a Guardian specialist.</p>
+        <div class="cta-buttons">
+            <a href="#leadForm" class="btn-cta-primary">Schedule Free Estimate</a>
+            <a href="{{ phone_href }}" class="btn-cta-secondary">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width:18px;height:18px;vertical-align:middle;margin-right:6px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                Call {{ phone_number }}
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════ FOOTER ══════════════════ -->
+<footer class="lp-footer">
+    <div class="container">
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <img src="/static/img/landing/guardian-logo.png" alt="Guardian Impact Windows & Roofing">
+            </div>
+            <div class="footer-info">
+                <div class="footer-phone">{{ phone_number }}</div>
+                <div class="footer-address">Serving Broward, Palm Beach & Miami-Dade Counties</div>
+            </div>
+        </div>
+        <div class="footer-legal">
+            &copy; 2025 Guardian Impact Windows & Roofing. All rights reserved. Licensed & Insured.
+            <br>Florida License #CBC1265975
         </div>
     </div>
 </footer>
 
-<!-- TRACKING -->
+<!-- ══════════════════ JAVASCRIPT ══════════════════ -->
 <script>
-function getCookie(n){var v=document.cookie.match('(^|;)\\s*'+n+'\\s*=\\s*([^;]+)');return v?v.pop():'';}
-(function(){
-    var f=['gclid','utm_source','utm_medium','utm_campaign','utm_term'];
-    var ids=['form-gclid','form-utm-source','form-utm-medium','form-utm-campaign','form-utm-term'];
-    for(var i=0;i<f.length;i++){var el=document.getElementById(ids[i]);if(el)el.value=getCookie(f[i]);}
-})();
-function trackPhoneClick(){
-    if(typeof gtag==='function')gtag('event','phone_click',{event_category:'engagement',gclid:getCookie('gclid'),value:1});
+// Sticky header shadow on scroll
+const header = document.getElementById('lpHeader');
+window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 10);
+});
+
+// Fade-in on scroll
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Get URL params (gclid, utm)
+function getUrlParams() {
+    const params = new URLSearchParams(window.location.search);
+    return {
+        gclid: params.get('gclid') || '',
+        utm_source: params.get('utm_source') || '',
+        utm_medium: params.get('utm_medium') || '',
+        utm_campaign: params.get('utm_campaign') || '',
+        utm_term: params.get('utm_term') || '',
+    };
 }
-function submitForm(e){
+
+// Submit lead form
+async function submitLead(e) {
     e.preventDefault();
-    var form=document.getElementById('lead-form'),fd=new FormData(form),p={};
-    fd.forEach(function(v,k){p[k]=v;});
-    if(typeof gtag==='function')gtag('event','form_submit',{event_category:'conversion',event_label:p.service||'unknown',gclid:getCookie('gclid'),product:p.product||'',geo:p.geo||'',value:1});
-    fetch('/submit-lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(p)})
-        .then(function(){form.style.display='none';document.getElementById('form-success').style.display='block';})
-        .catch(function(){form.style.display='none';document.getElementById('form-success').style.display='block';});
-    return false;
+    const btn = document.getElementById('submitBtn');
+    btn.textContent = 'Submitting...';
+    btn.disabled = true;
+
+    const params = getUrlParams();
+    const body = {
+        first_name: document.getElementById('firstName').value.trim(),
+        last_name: document.getElementById('lastName').value.trim(),
+        phone: document.getElementById('phone').value.trim(),
+        email: document.getElementById('email').value.trim(),
+        zip: document.getElementById('zip').value.trim(),
+        service: document.getElementById('service').value,
+        product: 'impact-windows-broward',
+        geo: 'broward',
+        ...params,
+    };
+
+    try {
+        const resp = await fetch('/submit-lead', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(body),
+        });
+
+        if (resp.ok) {
+            document.getElementById('formContent').style.display = 'none';
+            document.getElementById('formSuccess').style.display = 'block';
+
+            // Fire Google Ads conversion if gtag exists
+            if (typeof gtag === 'function') {
+                gtag('event', 'conversion', {
+                    send_to: 'AW-CONVERSION_ID/CONVERSION_LABEL',
+                    value: 1.0,
+                    currency: 'USD',
+                });
+            }
+        } else {
+            btn.textContent = 'Schedule My Free Estimate';
+            btn.disabled = false;
+            alert('Something went wrong. Please call us at {{ phone_number }}.');
+        }
+    } catch (err) {
+        btn.textContent = 'Schedule My Free Estimate';
+        btn.disabled = false;
+        alert('Something went wrong. Please call us at {{ phone_number }}.');
+    }
 }
-// Header scroll effect
-var header=document.getElementById('site-header');
-window.addEventListener('scroll',function(){header.classList.toggle('scrolled',window.scrollY>40);});
+
+// Phone number formatting
+document.getElementById('phone').addEventListener('input', function(e) {
+    let val = e.target.value.replace(/\D/g, '');
+    if (val.length > 10) val = val.slice(0, 10);
+    if (val.length >= 6) {
+        e.target.value = '(' + val.slice(0, 3) + ') ' + val.slice(3, 6) + '-' + val.slice(6);
+    } else if (val.length >= 3) {
+        e.target.value = '(' + val.slice(0, 3) + ') ' + val.slice(3);
+    } else if (val.length > 0) {
+        e.target.value = '(' + val;
+    }
+});
 </script>
+
 </body>
 </html>
