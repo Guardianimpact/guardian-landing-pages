@@ -27,100 +27,133 @@
         :root{--navy:#0F2447;--navy-deep:#091B38;--red:#C8202F;--red-hover:#A51B27;--white:#FFF;--off-white:#F5F6F8;--text:#1A2332;--muted:#7B8794}
         html{scroll-behavior:smooth}
         body{font-family:'Barlow',sans-serif;color:var(--text);line-height:1.6;background:var(--white);-webkit-font-smoothing:antialiased;padding-top:64px}
-        .container{max-width:1100px;margin:0 auto;padding:0 24px}
 
         /* ── HEADER ── */
         header{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--navy);height:64px;display:flex;align-items:center;box-shadow:0 2px 20px rgba(0,0,0,.3)}
-        .hdr{max-width:1100px;margin:0 auto;width:100%;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+        .hdr{max-width:1200px;margin:0 auto;width:100%;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
         .logo{display:flex;align-items:center;gap:10px;color:var(--white);text-decoration:none}
         .shield{width:36px;height:36px;background:var(--red);clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:18px;color:var(--white);flex-shrink:0}
-        .logo-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.15rem;letter-spacing:.5px;text-transform:uppercase}
+        .logo-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:.5px;text-transform:uppercase}
         .hdr-phone{color:var(--white);text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.15rem;letter-spacing:.5px;display:flex;align-items:center;gap:6px}
         .hdr-phone svg{width:18px;height:18px;fill:var(--red)}
         .hdr-cta{background:var(--red);color:var(--white);padding:10px 24px;border-radius:4px;text-decoration:none;font-weight:600;font-size:.9rem;letter-spacing:.3px;transition:background .2s;white-space:nowrap}
         .hdr-cta:hover{background:var(--red-hover)}
 
-        /* ── HERO ── */
-        .hero{min-height:100vh;background:linear-gradient(160deg,var(--navy-deep),var(--navy) 50%,#152D54);display:flex;align-items:center;justify-content:center;text-align:center;color:var(--white);padding:80px 24px;position:relative;overflow:hidden}
+        /* ── HERO — SPLIT LAYOUT ── */
+        .hero{background:linear-gradient(160deg,var(--navy-deep),var(--navy) 50%,#152D54);color:var(--white);padding:48px 24px 56px;position:relative;overflow:hidden}
         .hero::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='.018'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");pointer-events:none}
-        .hero-c{position:relative;z-index:1;max-width:800px}
-        .hero h1{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:3.4rem;line-height:1.08;text-transform:uppercase;margin-bottom:20px}
-        .hero h1 span{color:var(--red)}
-        .hero-sub{font-size:1.2rem;opacity:.85;max-width:580px;margin:0 auto 32px;line-height:1.5}
-        .hbadges{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:40px}
-        .hbadge{display:flex;align-items:center;gap:8px;font-size:.88rem;font-weight:500;opacity:.9}
-        .hbadge-ic{width:22px;height:22px;background:rgba(200,32,47,.3);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:10px;flex-shrink:0}
-        .btn-hero{display:inline-block;background:var(--red);color:var(--white);padding:16px 48px;border-radius:4px;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.15rem;letter-spacing:1px;text-transform:uppercase;transition:background .2s,transform .15s;box-shadow:0 4px 24px rgba(200,32,47,.4)}
-        .btn-hero:hover{background:var(--red-hover);transform:translateY(-2px)}
+        .hero-split{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 420px;gap:48px;align-items:center;position:relative;z-index:1}
+        .hero-left h1{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:3rem;line-height:1.08;text-transform:uppercase;margin-bottom:16px}
+        .hero-left h1 span{color:var(--red)}
+        .hero-sub{font-size:1.15rem;opacity:.85;max-width:520px;line-height:1.5;margin-bottom:28px}
+        .hbadges{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:28px}
+        .hbadge{display:flex;align-items:center;gap:8px;font-size:.85rem;font-weight:500;opacity:.9}
+        .hbadge-ic{width:22px;height:22px;background:rgba(200,32,47,.35);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:10px;flex-shrink:0}
+        .hero-licenses{display:flex;gap:20px;flex-wrap:wrap;padding-top:16px;border-top:1px solid rgba(255,255,255,.1)}
+        .lic{font-size:.78rem;opacity:.6;line-height:1.4}
+        .lic strong{opacity:1;font-weight:600}
+
+        /* ── HERO FORM (above fold) ── */
+        .hero-form{background:var(--white);border-radius:12px;padding:32px 28px;box-shadow:0 20px 60px rgba(0,0,0,.35);color:var(--text)}
+        .hero-form h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.45rem;color:var(--navy);text-align:center;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+        .form-sub{text-align:center;color:var(--muted);font-size:.85rem;margin-bottom:20px}
+        .frow{display:flex;gap:10px;margin-bottom:12px}
+        .frow input,.frow select{flex:1;padding:12px 12px;border:2px solid #E0E4EA;border-radius:6px;font-size:.92rem;font-family:'Barlow',sans-serif;transition:border-color .2s;background:#FAFBFC}
+        .frow input:focus,.frow select:focus{outline:none;border-color:var(--navy);background:var(--white)}
+        .frow input::placeholder{color:#A0A8B8}
+        .btn-sub{display:block;width:100%;padding:14px;margin-top:4px;background:var(--red);color:var(--white);border:none;border-radius:6px;cursor:pointer;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:1px;text-transform:uppercase;transition:background .2s;box-shadow:0 4px 16px rgba(200,32,47,.3)}
+        .btn-sub:hover{background:var(--red-hover)}
+        .sms{display:flex;align-items:flex-start;gap:6px;margin-top:10px;font-size:.68rem;color:var(--muted)}
+        .sms input{margin-top:3px;flex-shrink:0}
+        #form-success{text-align:center;padding:30px 0}
+        #form-success h3{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.4rem;color:#1B7A3D;margin-bottom:6px;text-transform:uppercase}
+        #form-success p{color:var(--muted);font-size:.9rem}
 
         /* ── PROOF STRIP ── */
-        .proof{background:var(--navy-deep);padding:16px 0;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
-        .proof-row{display:flex;justify-content:center;align-items:center;gap:36px;flex-wrap:wrap;color:var(--white)}
-        .proof-item{display:flex;align-items:center;gap:8px;font-size:.88rem;font-weight:500}
+        .proof{background:var(--navy-deep);padding:16px 24px;border-top:1px solid rgba(255,255,255,.06)}
+        .proof-row{max-width:1200px;margin:0 auto;display:flex;justify-content:center;align-items:center;gap:36px;flex-wrap:wrap;color:var(--white)}
+        .proof-item{display:flex;align-items:center;gap:8px;font-size:.85rem;font-weight:500}
         .proof-stars{color:#FBBF24;letter-spacing:2px}
         .proof-lbl{opacity:.7}
 
-        /* ── WHY GUARDIAN ── */
-        .why{padding:80px 0;background:var(--white)}
-        .sec-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:2.1rem;text-align:center;color:var(--navy);text-transform:uppercase;letter-spacing:.5px;margin-bottom:48px}
-        .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-        .wcard{background:var(--off-white);border-radius:8px;padding:32px 24px;text-align:center;border:1px solid #E2E6EC;transition:transform .2s,box-shadow .2s}
-        .wcard:hover{transform:translateY(-4px);box-shadow:0 8px 30px rgba(15,36,71,.08)}
-        .wcard-icon{font-size:2rem;margin-bottom:14px;display:block}
-        .wcard h3{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.1rem;color:var(--navy);margin-bottom:8px;text-transform:uppercase;letter-spacing:.3px}
-        .wcard p{font-size:.88rem;color:var(--muted);line-height:1.5}
+        /* ── PHOTO + TEXT SECTIONS ── */
+        .content-row{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch}
+        .content-row.reverse .cr-img{order:2}
+        .content-row.reverse .cr-text{order:1}
+        .cr-img{min-height:400px;background-size:cover;background-position:center}
+        .cr-text{padding:60px 48px;display:flex;flex-direction:column;justify-content:center}
+        .cr-text.navy-bg{background:var(--navy);color:var(--white)}
+        .cr-text.navy-bg .cr-body{opacity:.8}
+        .cr-text.white-bg{background:var(--white)}
+        .cr-text.gray-bg{background:var(--off-white)}
+        .cr-eyebrow{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:2px;color:var(--red);margin-bottom:8px}
+        .cr-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:2rem;text-transform:uppercase;margin-bottom:14px;line-height:1.1}
+        .cr-body{font-size:.95rem;line-height:1.65;margin-bottom:20px}
+        .cr-list{list-style:none;padding:0}
+        .cr-list li{padding:6px 0 6px 28px;position:relative;font-size:.9rem;font-weight:500}
+        .cr-list li::before{content:'&#10003;';position:absolute;left:0;color:var(--red);font-weight:700}
+        .navy-bg .cr-list li::before{color:#FBBF24}
 
-        /* ── FORM SECTION ── */
-        .form-sec{padding:80px 0;background:var(--navy);position:relative}
-        .form-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(200,32,47,.07),transparent 60%);pointer-events:none}
-        .form-card{position:relative;z-index:1;max-width:560px;margin:0 auto;background:var(--white);border-radius:12px;padding:44px 36px;box-shadow:0 20px 60px rgba(0,0,0,.3)}
-        .form-card h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.7rem;color:var(--navy);text-align:center;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
-        .form-sub{text-align:center;color:var(--muted);font-size:.9rem;margin-bottom:28px}
-        .frow{display:flex;gap:12px;margin-bottom:14px}
-        .frow input,.frow select{flex:1;padding:13px 14px;border:2px solid #E0E4EA;border-radius:6px;font-size:.95rem;font-family:'Barlow',sans-serif;transition:border-color .2s;background:#FAFBFC}
-        .frow input:focus,.frow select:focus{outline:none;border-color:var(--navy);background:var(--white)}
-        .frow input::placeholder{color:#A0A8B8}
-        .btn-sub{display:block;width:100%;padding:16px;margin-top:6px;background:var(--red);color:var(--white);border:none;border-radius:6px;cursor:pointer;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:1px;text-transform:uppercase;transition:background .2s;box-shadow:0 4px 16px rgba(200,32,47,.3)}
-        .btn-sub:hover{background:var(--red-hover)}
-        .sms{display:flex;align-items:flex-start;gap:8px;margin-top:12px;font-size:.72rem;color:var(--muted)}
-        .sms input{margin-top:3px}
-        #form-success{text-align:center;padding:36px 0}
-        #form-success h3{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.5rem;color:#1B7A3D;margin-bottom:6px;text-transform:uppercase}
-        #form-success p{color:var(--muted);font-size:.95rem}
+        /* ── WHY GUARDIAN ── */
+        .why{padding:72px 24px;background:var(--off-white)}
+        .sec-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:2rem;text-align:center;color:var(--navy);text-transform:uppercase;letter-spacing:.5px;margin-bottom:44px}
+        .why-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+        .wcard{background:var(--white);border-radius:8px;padding:28px 20px;text-align:center;border:1px solid #E2E6EC;transition:transform .2s,box-shadow .2s}
+        .wcard:hover{transform:translateY(-4px);box-shadow:0 8px 30px rgba(15,36,71,.08)}
+        .wcard-icon{font-size:1.8rem;margin-bottom:12px;display:block}
+        .wcard h3{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.05rem;color:var(--navy);margin-bottom:6px;text-transform:uppercase;letter-spacing:.3px}
+        .wcard p{font-size:.84rem;color:var(--muted);line-height:1.5}
 
         /* ── FINANCING ── */
-        .fin{padding:72px 0;background:var(--off-white)}
-        .fin-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;max-width:860px;margin:0 auto}
-        .fin-card{text-align:center;padding:28px 16px}
-        .fin-ic{width:60px;height:60px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;color:var(--white);font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.3rem}
-        .fin-card h3{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.2rem;color:var(--navy);text-transform:uppercase;margin-bottom:4px}
-        .fin-card p{font-size:.85rem;color:var(--muted)}
+        .fin{padding:72px 24px;background:var(--white)}
+        .fin-grid{max-width:860px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+        .fin-card{text-align:center;padding:24px 16px}
+        .fin-ic{width:60px;height:60px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;color:var(--white);font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.2rem}
+        .fin-card h3{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.15rem;color:var(--navy);text-transform:uppercase;margin-bottom:4px}
+        .fin-card p{font-size:.83rem;color:var(--muted)}
+
+        /* ── CTA BAND ── */
+        .cta-band{background:var(--red);padding:40px 24px;text-align:center;color:var(--white)}
+        .cta-band h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:2rem;text-transform:uppercase;margin-bottom:8px}
+        .cta-band p{font-size:1.05rem;opacity:.9;margin-bottom:20px}
+        .btn-cta-white{display:inline-block;background:var(--white);color:var(--red);padding:14px 40px;border-radius:4px;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.1rem;text-transform:uppercase;letter-spacing:1px;transition:transform .15s}
+        .btn-cta-white:hover{transform:translateY(-2px)}
 
         /* ── FOOTER ── */
-        footer{background:var(--navy-deep);padding:22px 0;color:rgba(255,255,255,.45);font-size:.8rem}
-        .ftr{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+        footer{background:var(--navy-deep);padding:28px 24px;color:rgba(255,255,255,.45);font-size:.8rem}
+        .ftr{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
         .ftr-brand{font-family:'Barlow Condensed',sans-serif;font-weight:700;color:rgba(255,255,255,.65);text-transform:uppercase;font-size:.9rem;letter-spacing:.5px}
         .ftr-tag{font-style:italic;color:rgba(255,255,255,.35);font-size:.78rem}
         .ftr-phone{color:var(--white);text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem}
+        .ftr-licenses{font-size:.72rem;color:rgba(255,255,255,.35);line-height:1.5}
 
         /* ── MOBILE ── */
-        @media(max-width:768px){
-            .hero h1{font-size:2.2rem}
-            .hero-sub{font-size:1rem}
-            .hbadges{gap:12px}.hbadge{font-size:.78rem}
-            .why-grid{grid-template-columns:repeat(2,1fr);gap:16px}
-            .fin-grid{grid-template-columns:1fr;gap:16px}
+        @media(max-width:900px){
+            .hero-split{grid-template-columns:1fr;gap:32px;text-align:center}
+            .hero-left h1{font-size:2.2rem}
+            .hbadges{justify-content:center}
+            .hero-licenses{justify-content:center}
+            .content-row{grid-template-columns:1fr}
+            .content-row.reverse .cr-img{order:0}
+            .content-row.reverse .cr-text{order:0}
+            .cr-img{min-height:280px}
+            .cr-text{padding:40px 24px}
+            .why-grid{grid-template-columns:repeat(2,1fr)}
             .hdr-phone{display:none}
             .proof-row{gap:16px}.proof-item{font-size:.78rem}
         }
         @media(max-width:480px){
-            .hero{padding:80px 16px 60px;min-height:auto}
-            .hero h1{font-size:1.75rem}
+            .hero{padding:32px 16px 40px}
+            .hero-left h1{font-size:1.75rem}
+            .hero-form{padding:24px 18px}
             .hbadges{flex-direction:column;align-items:center;gap:8px}
+            .hero-licenses{flex-direction:column;align-items:center;gap:4px}
             .why-grid{grid-template-columns:1fr}
+            .fin-grid{grid-template-columns:1fr;gap:16px}
             .frow{flex-direction:column}
-            .form-card{padding:28px 18px}
             .ftr{flex-direction:column;text-align:center}
+            .cr-img{min-height:220px}
+            .cr-text{padding:32px 18px}
         }
     </style>
 </head>
@@ -131,7 +164,7 @@
     <div class="hdr">
         <a href="/" class="logo">
             <div class="shield">G</div>
-            <span class="logo-name">Guardian Impact Windows</span>
+            <span class="logo-name">Guardian Impact Windows & Roofing</span>
         </a>
         <a href="{{ phone_href }}" class="hdr-phone" onclick="trackPhoneClick()">
             <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
@@ -141,66 +174,25 @@
     </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-    <div class="hero-c">
-        <h1>Broward County's Most Trusted<br><span>Impact Window</span> Contractor</h1>
-        <p class="hero-sub">Hurricane-rated protection, permitted and inspected, with 0% financing available.</p>
-        <div class="hbadges">
-            <div class="hbadge"><div class="hbadge-ic">&#9733;</div> 4.8 Google (520+ Reviews)</div>
-            <div class="hbadge"><div class="hbadge-ic">&#10003;</div> Licensed & Insured CGC</div>
-            <div class="hbadge"><div class="hbadge-ic">A+</div> BBB Rating</div>
-        </div>
-        <a href="#quote-form" class="btn-hero">Get Your Free Estimate</a>
-    </div>
-</section>
-
-<!-- PROOF STRIP -->
-<section class="proof">
-    <div class="container">
-        <div class="proof-row">
-            <div class="proof-item"><span class="proof-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <span class="proof-lbl">Google &middot; 520 Reviews</span></div>
-            <div class="proof-item"><span class="proof-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <span class="proof-lbl">Facebook</span></div>
-            <div class="proof-item"><span class="proof-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <span class="proof-lbl">HomeAdvisor &middot; Top Rated</span></div>
-        </div>
-    </div>
-</section>
-
-<!-- WHY GUARDIAN -->
-<section class="why">
-    <div class="container">
-        <h2 class="sec-title">Why Broward County Homeowners Choose Guardian</h2>
-        <div class="why-grid">
-            <div class="wcard">
-                <span class="wcard-icon">&#127968;</span>
-                <h3>South Florida Local</h3>
-                <p>Not a national chain. We know Broward County permits, inspectors, and HOA requirements.</p>
+<!-- HERO — SPLIT: headline left, form right, all above fold -->
+<section class="hero" id="quote-form">
+    <div class="hero-split">
+        <div class="hero-left">
+            <h1>Broward County's Most Trusted<br><span>Impact Window</span> Contractor</h1>
+            <p class="hero-sub">Hurricane-rated protection, permitted and inspected, with 0% financing available.</p>
+            <div class="hbadges">
+                <div class="hbadge"><div class="hbadge-ic">&#9733;</div> 4.8 Google (520+ Reviews)</div>
+                <div class="hbadge"><div class="hbadge-ic">&#10003;</div> Licensed & Insured</div>
+                <div class="hbadge"><div class="hbadge-ic">A+</div> BBB Rating</div>
             </div>
-            <div class="wcard">
-                <span class="wcard-icon">&#11088;</span>
-                <h3>520+ Five-Star Reviews</h3>
-                <p>Consistently rated #1 impact window contractor in South Florida.</p>
-            </div>
-            <div class="wcard">
-                <span class="wcard-icon">&#128176;</span>
-                <h3>0% Financing Available</h3>
-                <p>400+ plans, everyone qualifies. No money down options.</p>
-            </div>
-            <div class="wcard">
-                <span class="wcard-icon">&#128203;</span>
-                <h3>We Handle Everything</h3>
-                <p>Permits pulled, inspections scheduled, HOA paperwork handled for you.</p>
+            <div class="hero-licenses">
+                <div class="lic"><strong>Certified General Contractor</strong> &mdash; CGC-1524314</div>
+                <div class="lic"><strong>Certified Roofing Contractor</strong> &mdash; CCC-1334906</div>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- LEAD FORM -->
-<section class="form-sec" id="quote-form">
-    <div class="container">
-        <div class="form-card">
-            <h2>Get Your Free In-Home Estimate</h2>
-            <p class="form-sub">Broward County homeowners — no obligation, same-week appointments available.</p>
+        <div class="hero-form">
+            <h2>Get Your Free Estimate</h2>
+            <p class="form-sub">No obligation &middot; Same-week appointments</p>
             <form id="lead-form" onsubmit="return submitForm(event)">
                 <input type="hidden" name="gclid" id="form-gclid">
                 <input type="hidden" name="utm_source" id="form-utm-source">
@@ -239,46 +231,139 @@
             </form>
             <div id="form-success" style="display:none;">
                 <h3>Thank You!</h3>
-                <p>A Guardian specialist will call you within 15 minutes during business hours.</p>
+                <p>A Guardian specialist will call you within 15 minutes.</p>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROOF STRIP -->
+<section class="proof">
+    <div class="proof-row">
+        <div class="proof-item"><span class="proof-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <span class="proof-lbl">Google &middot; 520 Reviews</span></div>
+        <div class="proof-item"><span class="proof-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <span class="proof-lbl">Facebook</span></div>
+        <div class="proof-item"><span class="proof-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <span class="proof-lbl">HomeAdvisor &middot; Top Rated</span></div>
+    </div>
+</section>
+
+<!-- PHOTO ROW 1: Impact Windows Close-up + Why Impact Windows text -->
+<div class="content-row">
+    <div class="cr-img" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80&auto=format');"></div>
+    <div class="cr-text white-bg">
+        <span class="cr-eyebrow">Hurricane Protection</span>
+        <h2 class="cr-title">Why Impact Windows?</h2>
+        <p class="cr-body">Florida's hurricane season puts your home at risk every year. Impact windows are designed to withstand Category 5 winds and flying debris — protecting your family, your property, and your peace of mind.</p>
+        <ul class="cr-list">
+            <li>Withstand 200+ MPH winds and large missile impact</li>
+            <li>Reduce homeowners insurance by up to 45%</li>
+            <li>Block 99% of UV rays — protect furniture and flooring</li>
+            <li>Reduce outside noise by up to 50%</li>
+            <li>Increase your home's resale value</li>
+        </ul>
+    </div>
+</div>
+
+<!-- PHOTO ROW 2: South Florida home + Local Expertise text -->
+<div class="content-row reverse">
+    <div class="cr-img" style="background-image:url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80&auto=format');"></div>
+    <div class="cr-text navy-bg">
+        <span class="cr-eyebrow" style="color:#FBBF24">Broward County Experts</span>
+        <h2 class="cr-title">Built for South Florida</h2>
+        <p class="cr-body">We're not a national franchise that just showed up. Guardian was built in Broward County, for Broward County. We know the building codes, the permit offices, the inspectors, and the HOA requirements — because we deal with them every single day.</p>
+        <ul class="cr-list">
+            <li>We pull all permits and schedule all inspections</li>
+            <li>Full compliance with Florida Building Code and Miami-Dade NOA</li>
+            <li>HOA paperwork prepared and submitted for you</li>
+            <li>Dedicated project manager from start to finish</li>
+        </ul>
+    </div>
+</div>
+
+<!-- PHOTO ROW 3: Installation + Process text -->
+<div class="content-row">
+    <div class="cr-img" style="background-image:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80&auto=format');"></div>
+    <div class="cr-text gray-bg">
+        <span class="cr-eyebrow">Our Process</span>
+        <h2 class="cr-title">From Estimate to Installation</h2>
+        <p class="cr-body">We make impact window installation stress-free. Our team handles every detail so you can focus on what matters — your family.</p>
+        <ul class="cr-list">
+            <li><strong>Day 1:</strong> Free in-home measurement and consultation</li>
+            <li><strong>48 Hours:</strong> Detailed written quote with product specs</li>
+            <li><strong>We Handle:</strong> Permits, HOA approval, scheduling</li>
+            <li><strong>Install Day:</strong> Professional crew, clean jobsite, final walkthrough</li>
+            <li><strong>After:</strong> City inspection coordinated, warranty registered</li>
+        </ul>
+    </div>
+</div>
+
+<!-- WHY GUARDIAN -->
+<section class="why">
+    <h2 class="sec-title">Why Broward County Homeowners Choose Guardian</h2>
+    <div class="why-grid">
+        <div class="wcard">
+            <span class="wcard-icon">&#127968;</span>
+            <h3>South Florida Local</h3>
+            <p>Not a national chain. We know Broward County permits, inspectors, and HOA requirements.</p>
+        </div>
+        <div class="wcard">
+            <span class="wcard-icon">&#11088;</span>
+            <h3>520+ Five-Star Reviews</h3>
+            <p>Consistently rated #1 impact window contractor in South Florida.</p>
+        </div>
+        <div class="wcard">
+            <span class="wcard-icon">&#128176;</span>
+            <h3>0% Financing Available</h3>
+            <p>400+ plans, everyone qualifies. No money down options.</p>
+        </div>
+        <div class="wcard">
+            <span class="wcard-icon">&#128203;</span>
+            <h3>We Handle Everything</h3>
+            <p>Permits pulled, inspections scheduled, HOA paperwork handled for you.</p>
         </div>
     </div>
 </section>
 
 <!-- FINANCING -->
 <section class="fin">
-    <div class="container">
-        <h2 class="sec-title">No Budget? No Problem.</h2>
-        <div class="fin-grid">
-            <div class="fin-card">
-                <div class="fin-ic">0%</div>
-                <h3>0% Interest</h3>
-                <p>Up to 5 years on qualifying projects</p>
-            </div>
-            <div class="fin-card">
-                <div class="fin-ic">400+</div>
-                <h3>Plans Available</h3>
-                <p>Something for every budget and project size</p>
-            </div>
-            <div class="fin-card">
-                <div class="fin-ic">&#10003;</div>
-                <h3>Everyone Qualifies</h3>
-                <p>No project too big or small — approved in minutes</p>
-            </div>
+    <h2 class="sec-title">No Budget? No Problem.</h2>
+    <div class="fin-grid">
+        <div class="fin-card">
+            <div class="fin-ic">0%</div>
+            <h3>0% Interest</h3>
+            <p>Up to 5 years on qualifying projects</p>
+        </div>
+        <div class="fin-card">
+            <div class="fin-ic">400+</div>
+            <h3>Plans Available</h3>
+            <p>Something for every budget and project size</p>
+        </div>
+        <div class="fin-card">
+            <div class="fin-ic">&#10003;</div>
+            <h3>Everyone Qualifies</h3>
+            <p>No project too big or small — approved in minutes</p>
         </div>
     </div>
 </section>
 
+<!-- CTA BAND -->
+<section class="cta-band">
+    <h2>Ready to Protect Your Home?</h2>
+    <p>Get a free, no-obligation estimate from Broward County's top-rated impact window contractor.</p>
+    <a href="#quote-form" class="btn-cta-white">Get My Free Estimate</a>
+</section>
+
 <!-- FOOTER -->
 <footer>
-    <div class="container">
-        <div class="ftr">
-            <div>
-                <div class="ftr-brand">Guardian Impact Windows & Roofing</div>
-                <div class="ftr-tag">We guard what matters most.</div>
-            </div>
-            <a href="{{ phone_href }}" class="ftr-phone callrail-number" onclick="trackPhoneClick()">{{ phone_number }}</a>
-            <div>CGC License &middot; &copy; 2026 Guardian Impact Windows & Roofing</div>
+    <div class="ftr">
+        <div>
+            <div class="ftr-brand">Guardian Impact Windows & Roofing</div>
+            <div class="ftr-tag">We guard what matters most.</div>
+        </div>
+        <a href="{{ phone_href }}" class="ftr-phone callrail-number" onclick="trackPhoneClick()">{{ phone_number }}</a>
+        <div class="ftr-licenses">
+            Certified General Contractor CGC-1524314<br>
+            Certified Roofing Contractor CCC-1334906<br>
+            &copy; 2026 Guardian Impact Windows & Roofing
         </div>
     </div>
 </footer>
