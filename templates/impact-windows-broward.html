@@ -296,11 +296,11 @@
 
         /* ── Manufacturers ────────────────────────────────── */
         .mfg-grid {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+            display: flex; justify-content: center; gap: 32px; flex-wrap: wrap;
             max-width: 900px; margin: 0 auto;
         }
         .mfg-card {
-            text-align: center; padding: 32px 24px;
+            text-align: center; padding: 32px 24px; width: 280px;
             background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
             border-radius: 16px; transition: all .3s;
         }
@@ -401,7 +401,7 @@
             .hero-text h1 { font-size: 36px; }
             .lead-form-card { max-width: 480px; margin: 0 auto; }
             .why-grid, .products-grid, .reviews-grid { grid-template-columns: 1fr; }
-            .mfg-grid { grid-template-columns: 1fr; max-width: 400px; }
+            .mfg-grid { flex-direction: column; align-items: center; max-width: 400px; }
             .financing-inner { grid-template-columns: 1fr; gap: 32px; }
             .social-proof-inner { gap: 24px; }
             .section [style*="grid-template-columns: 1fr 1fr"] { grid-template-columns: 1fr !important; }
